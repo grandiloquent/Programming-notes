@@ -1,2 +1,3 @@
-"# Programming-notes" 
-"# Programming-notes" 
+# Programming notes
+
+[Go](/Go.md)
