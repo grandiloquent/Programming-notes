@@ -1,172 +1,20 @@
 # C
 
 - [Algorithms](#algorithms)
-	- [bsearch_s](#bsearch_s)
-	- [qsort_s](#qsort_s)
+- [Atomic operations](#atomic-operations)
+- [Keywords](#keywords)
+- [Language](#language)
+- [Date and time](#date-and-time)
 - [Dynamic memory management](#dynamic-memory-management)
-	- [aligned_alloc](#aligned_alloc)
-	- [calloc](#calloc)
-	- [free](#free)
-	- [malloc](#malloc)
-	- [realloc](#realloc)
-- [File](#file)
-	- [clearerr](#clearerr)
-	- [fclose](#fclose)
-	- [feof](#feof)
-	- [ferror](#ferror)
-	- [fflush](#fflush)
-	- [fgetc](#fgetc)
-	- [fgetpos](#fgetpos)
-	- [fgets](#fgets)
-	- [fopen_s](#fopen_s)
-	- [fprintf_s](#fprintf_s)
-	- [fputc](#fputc)
-	- [fputs](#fputs)
-	- [fread](#fread)
-	- [freopen_s](#freopen_s)
-	- [fscanf_s](#fscanf_s)
-	- [fseek](#fseek)
-	- [fsetpos](#fsetpos)
-	- [ftell](#ftell)
-	- [fwide](#fwide)
-	- [fwrite](#fwrite)
-	- [getc](#getc)
-	- [getchar](#getchar)
-	- [gets](#gets)
-	- [gets_s](#gets_s)
-	- [getwchar](#getwchar)
-	- [perror](#perror)
-	- [printf](#printf)
-	- [printf_s](#printf_s)
-	- [putc](#putc)
-	- [putchar](#putchar)
-	- [puts](#puts)
-	- [putwc](#putwc)
-	- [putwchar](#putwchar)
-	- [remove](#remove)
-	- [rename](#rename)
-	- [rewind](#rewind)
-	- [scanf_s](#scanf_s)
-	- [setbuf](#setbuf)
-	- [setvbuf](#setvbuf)
-	- [sprintf_s](#sprintf_s)
-	- [tmpfile_s ](#tmpfile_s)
-	- [tmpnam_s](#tmpnam_s)
-	- [ungetc](#ungetc)
-	- [ungetwc ](#ungetwc)
-	- [vfprintf_s](#vfprintf_s)
-	- [vfscanf_s  ](#vfscanf_s)
-	- [vscanf_s ](#vscanf_s)
-	- [vsnwprintf_s  ](#vsnwprintf_s)
-	- [vsscanf_s  ](#vsscanf_s)
-- [keywords](#keywords)
-	- [auto](#auto)
-	- [break](#break)
-	- [case](#case)
-	- [char](#char)
-	- [const](#const)
-	- [continue](#continue)
-	- [default](#default)
-	- [do](#do)
-	- [double](#double)
-	- [else](#else)
-	- [enum](#enum)
-	- [extern](#extern)
-	- [float](#float)
-	- [for](#for)
-	- [fortran](#fortran)
-	- [goto](#goto)
-	- [if](#if)
-	- [inline](#inline)
-	- [int](#int)
-	- [long](#long)
-	- [register](#register)
-	- [restrict](#restrict)
-	- [return](#return)
-	- [short](#short)
-	- [signed](#signed)
-	- [sizeof](#sizeof)
-	- [static](#static)
-	- [struct](#struct)
-	- [switch](#switch)
-	- [typedef](#typedef)
-	- [union](#union)
-	- [unsigned](#unsigned)
-	- [void](#void)
-	- [volatile](#volatile)
-	- [while](#while)
-	- [_Alignas](#_alignas)
-	- [_Alignof](#_alignof)
-	- [_Atomic](#_atomic)
-	- [_Bool](#_bool)
-	- [_Complex](#_complex)
-	- [_Generic](#_generic)
-	- [_Imaginary](#_imaginary)
-	- [_Noreturn](#_noreturn)
-	- [_Static_assert](#_static_assert)
-	- [_Thread_local](#_thread_local)
+- [Error handling](#error-handling)
+- [File input/output](#file-inputoutput)
+- [Localization support](#localization-support)
+- [Numerics](#numerics)
+- [Program support](#program-support)
 - [Strings](#strings)
-	- [atof](#atof)
-	- [atoi](#atoi)
-	- [btowc](#btowc)
-	- [c32rtomb](#c32rtomb)
-	- [char32_t](#char32_t)
-	- [isalnum](#isalnum)
-	- [isblank](#isblank)
-	- [iscntrl](#iscntrl)
-	- [isdigit](#isdigit)
-	- [isgraph](#isgraph)
-	- [islower](#islower)
-	- [isprint](#isprint)
-	- [isspace](#isspace)
-	- [isxdigit](#isxdigit)
-	- [mblen](#mblen)
-	- [mbrlen](#mbrlen)
-	- [mbrtoc16](#mbrtoc16)
-	- [mbrtoc32](#mbrtoc32)
-	- [mbrtowc](#mbrtowc)
-	- [mbsinit](#mbsinit)
-	- [mbsrtowcs](#mbsrtowcs)
-	- [mbsrtowcs_s](#mbsrtowcs_s)
-	- [mbstate_t](#mbstate_t)
-	- [mbstowcs](#mbstowcs)
-	- [mbstowcs_s](#mbstowcs_s)
-	- [mbtowc](#mbtowc)
-	- [memchr](#memchr)
-	- [memcmp ](#memcmp)
-	- [memcpy_s](#memcpy_s)
-	- [memmove_s](#memmove_s)
-	- [memset_s](#memset_s)
-	- [strcat_s](#strcat_s)
-	- [strchr](#strchr)
-	- [strcmp](#strcmp)
-	- [strcoll](#strcoll)
-	- [strcpy_s](#strcpy_s)
-	- [strcspn](#strcspn)
-	- [strerror_s](#strerror_s)
-	- [strlen](#strlen)
-	- [strncat_s](#strncat_s)
-	- [strncmp](#strncmp)
-	- [strncpy_s](#strncpy_s)
-	- [strnlen_s](#strnlen_s)
-	- [strpbrk](#strpbrk)
-	- [strrchr](#strrchr)
-	- [strspn](#strspn)
-	- [strstr](#strstr)
-	- [strtod](#strtod)
-	- [strtoimax](#strtoimax)
-	- [strtok_s](#strtok_s)
-	- [strtol](#strtol)
-	- [strxfrm](#strxfrm)
-	- [wcrtomb_s](#wcrtomb_s)
-	- [wctob](#wctob)
-	- [wctomb_s](#wctomb_s)
+- [Thread support](#thread-support)
+- [Type support](#type-support)
 - [Variadic functions](#variadic-functions)
-	- [va_arg](#va_arg)
-	- [va_copy](#va_copy)
-	- [va_end](#va_end)
-	- [va_list](#va_list)
-	- [va_start](#va_start)
 - [Linux](#linux)
 	- [fdopendir](#fdopendir)
 	- [fstatat](#fstatat)
@@ -176,1231 +24,907 @@
 
 ## Algorithms
 
-### bsearch_s
+- [bsearch](https://devdocs.io/c/algorithm/bsearch)
+- [bsearch_s](https://devdocs.io/c/algorithm/bsearch)
+- [qsort](https://devdocs.io/c/algorithm/qsort)
+- [qsort_s](https://devdocs.io/c/algorithm/qsort)
 
+## Atomic operations
 
-```c
-#include <stdlib.h>
-#include <stdio.h>
- 
-struct data {
-    int nr;
-    char const *value;
-} dat[] = {
-    {1, "Foo"}, {2, "Bar"}, {3, "Hello"}, {4, "World"}
-};
- 
-int data_cmp(void const *lhs, void const *rhs) 
-{
-    struct data const *const l = lhs;
-    struct data const *const r = rhs;
- 
-    if (l->nr < r->nr) return -1;
-    else if (l->nr > r->nr) return 1;
-    else return 0;
- 
-    // return (l->nr > r->nr) - (l->nr < r->nr); // possible shortcut
-    // return l->nr - r->nr; // erroneous shortcut (fails if INT_MIN is present)
-}
- 
-int main(void) 
-{
-    struct data key = { .nr = 3 };
-    struct data const *res = bsearch(&key, dat, sizeof dat / sizeof dat[0],
-                                     sizeof dat[0], data_cmp);
-    if (res) {
-        printf("No %d: %s\n", res->nr, res->value);
-    } else {
-        printf("No %d not found\n", key.nr);
-    }
-}
-/*
-No 3: Hello
-*/
-```
+- [`ATOMIC_*_LOCK_FREE`](https://devdocs.io/c/atomic/atomic_lock_free_consts)
+- [atomic_compare_exchange_strong](https://devdocs.io/c/atomic/atomic_compare_exchange)
+- [atomic_compare_exchange_strong_explicit](https://devdocs.io/c/atomic/atomic_compare_exchange)
+- [atomic_compare_exchange_weak](https://devdocs.io/c/atomic/atomic_compare_exchange)
+- [atomic_compare_exchange_weak_explicit](https://devdocs.io/c/atomic/atomic_compare_exchange)
+- [atomic_exchange](https://devdocs.io/c/atomic/atomic_exchange)
+- [atomic_exchange_explicit](https://devdocs.io/c/atomic/atomic_exchange)
+- [atomic_fetch_add](https://devdocs.io/c/atomic/atomic_fetch_add)
+- [atomic_fetch_add_explicit](https://devdocs.io/c/atomic/atomic_fetch_add)
+- [atomic_fetch_and](https://devdocs.io/c/atomic/atomic_fetch_and)
+- [atomic_fetch_and_explicit](https://devdocs.io/c/atomic/atomic_fetch_and)
+- [atomic_fetch_or](https://devdocs.io/c/atomic/atomic_fetch_or)
+- [atomic_fetch_or_explicit](https://devdocs.io/c/atomic/atomic_fetch_or)
+- [atomic_fetch_sub](https://devdocs.io/c/atomic/atomic_fetch_sub)
+- [atomic_fetch_sub_explicit](https://devdocs.io/c/atomic/atomic_fetch_sub)
+- [atomic_fetch_xor](https://devdocs.io/c/atomic/atomic_fetch_xor)
+- [atomic_fetch_xor_explicit](https://devdocs.io/c/atomic/atomic_fetch_xor)
+- [atomic_flag](https://devdocs.io/c/atomic/atomic_flag)
+- [atomic_flag_clear](https://devdocs.io/c/atomic/atomic_flag_clear)
+- [atomic_flag_clear_explicit](https://devdocs.io/c/atomic/atomic_flag_clear)
+- [ATOMIC_FLAG_INIT](https://devdocs.io/c/atomic/atomic_flag_init)
+- [atomic_flag_test_and_set](https://devdocs.io/c/atomic/atomic_flag_test_and_set)
+- [atomic_flag_test_and_set_explicit](https://devdocs.io/c/atomic/atomic_flag_test_and_set)
+- [atomic_init](https://devdocs.io/c/atomic/atomic_init)
+- [atomic_is_lock_free](https://devdocs.io/c/atomic/atomic_is_lock_free)
+- [atomic_load](https://devdocs.io/c/atomic/atomic_load)
+- [atomic_load_explicit](https://devdocs.io/c/atomic/atomic_load)
+- [atomic_signal_fence](https://devdocs.io/c/atomic/atomic_signal_fence)
+- [atomic_store](https://devdocs.io/c/atomic/atomic_store)
+- [atomic_store_explicit](https://devdocs.io/c/atomic/atomic_store)
+- [atomic_thread_fence](https://devdocs.io/c/atomic/atomic_thread_fence)
+- [ATOMIC_VAR_INIT](https://devdocs.io/c/atomic/atomic_var_init)
+- [kill_dependency](https://devdocs.io/c/atomic/kill_dependency)
+- [memory_order](https://devdocs.io/c/atomic/memory_order)
 
-### qsort_s
+## Keywords
 
+- [_Alignas](https://devdocs.io/c/keyword/_alignas)
+- [_Alignof](https://devdocs.io/c/keyword/_alignof)
+- [_Atomic](https://devdocs.io/c/keyword/_atomic)
+- [_Bool](https://devdocs.io/c/keyword/_bool)
+- [_Complex](https://devdocs.io/c/keyword/_complex)
+- [_Generic](https://devdocs.io/c/keyword/_generic)
+- [_Imaginary](https://devdocs.io/c/keyword/_imaginary)
+- [_Noreturn](https://devdocs.io/c/keyword/_noreturn)
+- [_Static_assert](https://devdocs.io/c/keyword/_static_assert)
+- [_Thread_local](https://devdocs.io/c/keyword/_thread_local)
+- [auto](https://devdocs.io/c/keyword/auto)
+- [break](https://devdocs.io/c/keyword/break)
+- [case](https://devdocs.io/c/keyword/case)
+- [char](https://devdocs.io/c/keyword/char)
+- [const](https://devdocs.io/c/keyword/const)
+- [continue](https://devdocs.io/c/keyword/continue)
+- [default](https://devdocs.io/c/keyword/default)
+- [do](https://devdocs.io/c/keyword/do)
+- [double](https://devdocs.io/c/keyword/double)
+- [else](https://devdocs.io/c/keyword/else)
+- [enum](https://devdocs.io/c/keyword/enum)
+- [extern](https://devdocs.io/c/keyword/extern)
+- [float](https://devdocs.io/c/keyword/float)
+- [for](https://devdocs.io/c/keyword/for)
+- [fortran](https://devdocs.io/c/keyword/fortran)
+- [goto](https://devdocs.io/c/keyword/goto)
+- [if](https://devdocs.io/c/keyword/if)
+- [inline](https://devdocs.io/c/keyword/inline)
+- [int](https://devdocs.io/c/keyword/int)
+- [long](https://devdocs.io/c/keyword/long)
+- [register](https://devdocs.io/c/keyword/register)
+- [restrict](https://devdocs.io/c/keyword/restrict)
+- [return](https://devdocs.io/c/keyword/return)
+- [short](https://devdocs.io/c/keyword/short)
+- [signed](https://devdocs.io/c/keyword/signed)
+- [sizeof](https://devdocs.io/c/keyword/sizeof)
+- [static](https://devdocs.io/c/keyword/static)
+- [struct](https://devdocs.io/c/keyword/struct)
+- [switch](https://devdocs.io/c/keyword/switch)
+- [typedef](https://devdocs.io/c/keyword/typedef)
+- [union](https://devdocs.io/c/keyword/union)
+- [unsigned](https://devdocs.io/c/keyword/unsigned)
+- [void](https://devdocs.io/c/keyword/void)
+- [volatile](https://devdocs.io/c/keyword/volatile)
+- [while](https://devdocs.io/c/keyword/while)
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
- 
-int compare_ints(const void* a, const void* b)
-{
-    int arg1 = *(const int*)a;
-    int arg2 = *(const int*)b;
- 
-    if (arg1 < arg2) return -1;
-    if (arg1 > arg2) return 1;
-    return 0;
- 
-    // return (arg1 > arg2) - (arg1 < arg2); // possible shortcut
-    // return arg1 - arg2; // erroneous shortcut (fails if INT_MIN is present)
-}
- 
-int main(void)
-{
-    int ints[] = { -2, 99, 0, -743, 2, INT_MIN, 4 };
-    int size = sizeof ints / sizeof *ints;
- 
-    qsort(ints, size, sizeof(int), compare_ints);
- 
-    for (int i = 0; i < size; i++) {
-        printf("%d ", ints[i]);
-    }
- 
-    printf("\n");
-}
-// -2147483648 -743 -2 0 2 4 99
-```
+## Language
 
+- [#define directive](https://devdocs.io/c/preprocessor/replace)
+- [#elif directive](https://devdocs.io/c/preprocessor/conditional)
+- [#else directive](https://devdocs.io/c/preprocessor/conditional)
+- [#endif directive](https://devdocs.io/c/preprocessor/conditional)
+- [#error directive](https://devdocs.io/c/preprocessor/error)
+- [#if directive](https://devdocs.io/c/preprocessor/conditional)
+- [#ifdef directive](https://devdocs.io/c/preprocessor/conditional)
+- [#ifndef directive](https://devdocs.io/c/preprocessor/conditional)
+- [#include directive](https://devdocs.io/c/preprocessor/include)
+- [#line directive](https://devdocs.io/c/preprocessor/line)
+- [#pragma directive](https://devdocs.io/c/preprocessor/impl)
+- [_Alignof operator](https://devdocs.io/c/language/alignof)
+- [_Noreturn function specifier](https://devdocs.io/c/language/_noreturn)
+- [alignas](https://devdocs.io/c/language/alignas)
+- [Alternative operators and tokens](https://devdocs.io/c/language/operator_alternative)
+- [Analyzability](https://devdocs.io/c/language/analyzability)
+- [Arithmetic operators](https://devdocs.io/c/language/operator_arithmetic)
+- [Arithmetic types](https://devdocs.io/c/language/arithmetic_types)
+- [Array declaration](https://devdocs.io/c/language/array)
+- [Array initialization](https://devdocs.io/c/language/array_initialization)
+- [ASCII Chart](https://devdocs.io/c/language/ascii)
+- [Assignment operators](https://devdocs.io/c/language/operator_assignment)
+- [atomic types](https://devdocs.io/c/language/atomic)
+- [Basic concepts](https://devdocs.io/c/language/basic_concepts)
+- [Bit fields](https://devdocs.io/c/language/bit_field)
+- [break statement](https://devdocs.io/c/language/break)
+- [C Operator Precedence](https://devdocs.io/c/language/operator_precedence)
+- [cast operator](https://devdocs.io/c/language/cast)
+- [character constant](https://devdocs.io/c/language/character_constant)
+- [Comments](https://devdocs.io/c/comment)
+- [Comparison operators](https://devdocs.io/c/language/operator_comparison)
+- [compound literals](https://devdocs.io/c/language/compound_literal)
+- [Conditional inclusion](https://devdocs.io/c/preprocessor/conditional)
+- [Conformance](https://devdocs.io/c/language/conformance)
+- [const type qualifier](https://devdocs.io/c/language/const)
+- [Constant expressions](https://devdocs.io/c/language/constant_expression)
+- [continue statement](https://devdocs.io/c/language/continue)
+- [Declarations](https://devdocs.io/c/language/declarations)
+- [do-while loop](https://devdocs.io/c/language/do)
+- [Enumerations](https://devdocs.io/c/language/enum)
+- [Escape sequences](https://devdocs.io/c/language/escape)
+- [Expressions](https://devdocs.io/c/language/expressions)
+- [External and tentative definitions](https://devdocs.io/c/language/extern)
+- [File scope](https://devdocs.io/c/language/file_scope)
+- [floating constant](https://devdocs.io/c/language/floating_constant)
+- [for loop](https://devdocs.io/c/language/for)
+- [Function declarations](https://devdocs.io/c/language/function_declaration)
+- [Function definitions](https://devdocs.io/c/language/function_definition)
+- [Functions](https://devdocs.io/c/language/functions)
+- [Generic selection](https://devdocs.io/c/language/generic)
+- [goto statement](https://devdocs.io/c/language/goto)
+- [Identifier](https://devdocs.io/c/language/identifier)
+- [if statement](https://devdocs.io/c/language/if)
+- [Implicit conversions](https://devdocs.io/c/language/conversion)
+- [Increment/decrement operators](https://devdocs.io/c/language/operator_incdec)
+- [Initialization](https://devdocs.io/c/language/initialization)
+- [inline function specifier](https://devdocs.io/c/language/inline)
+- [integer constant](https://devdocs.io/c/language/integer_constant)
+- [Lifetime](https://devdocs.io/c/language/lifetime)
+- [Logical operators](https://devdocs.io/c/language/operator_logical)
+- [Lookup and name spaces](https://devdocs.io/c/language/name_space)
+- [Main function](https://devdocs.io/c/language/main_function)
+- [Member access operators](https://devdocs.io/c/language/operator_member_access)
+- [Memory model](https://devdocs.io/c/language/memory_model)
+- [Objects and alignment](https://devdocs.io/c/language/object)
+- [Order of evaluation](https://devdocs.io/c/language/eval_order)
+- [Other operators](https://devdocs.io/c/language/operator_other)
+- [Phases of translation](https://devdocs.io/c/language/translation_phases)
+- [Pointer declaration](https://devdocs.io/c/language/pointer)
+- [Preprocessor](https://devdocs.io/c/preprocessor)
+- [restrict type qualifier](https://devdocs.io/c/language/restrict)
+- [return statement](https://devdocs.io/c/language/return)
+- [Scalar initialization](https://devdocs.io/c/language/scalar_initialization)
+- [Scope](https://devdocs.io/c/language/scope)
+- [sizeof operator](https://devdocs.io/c/language/sizeof)
+- [Statements](https://devdocs.io/c/language/statements)
+- [static assert declaration](https://devdocs.io/c/language/static_assert)
+- [Static storage duration](https://devdocs.io/c/language/static_storage_duration)
+- [Storage-class specifiers](https://devdocs.io/c/language/storage_duration)
+- [string literals](https://devdocs.io/c/language/string_literal)
+- [Struct and union initialization](https://devdocs.io/c/language/struct_initialization)
+- [Struct declaration](https://devdocs.io/c/language/struct)
+- [switch statement](https://devdocs.io/c/language/switch)
+- [Thread storage duration](https://devdocs.io/c/language/thread_storage_duration)
+- [Type](https://devdocs.io/c/language/compatible_type)
+- [Type](https://devdocs.io/c/language/types)
+- [Typedef declaration](https://devdocs.io/c/language/typedef)
+- [Undefined behavior](https://devdocs.io/c/language/behavior)
+- [Union declaration](https://devdocs.io/c/language/union)
+- [Value categories](https://devdocs.io/c/language/value_category)
+- [Variadic arguments](https://devdocs.io/c/language/variadic)
+- [volatile type qualifier](https://devdocs.io/c/language/volatile)
+- [while loop](https://devdocs.io/c/language/while)
+
+## Date and time
+
+- [asctime](https://devdocs.io/c/chrono/asctime)
+- [asctime_s](https://devdocs.io/c/chrono/asctime)
+- [clock](https://devdocs.io/c/chrono/clock)
+- [clock_t](https://devdocs.io/c/chrono/clock_t)
+- [CLOCKS_PER_SEC](https://devdocs.io/c/chrono/clocks_per_sec)
+- [ctime](https://devdocs.io/c/chrono/ctime)
+- [ctime_s](https://devdocs.io/c/chrono/ctime)
+- [Date and time utilities](https://devdocs.io/c/chrono)
+- [difftime](https://devdocs.io/c/chrono/difftime)
+- [gmtime](https://devdocs.io/c/chrono/gmtime)
+- [gmtime_s](https://devdocs.io/c/chrono/gmtime)
+- [localtime](https://devdocs.io/c/chrono/localtime)
+- [localtime_s](https://devdocs.io/c/chrono/localtime)
+- [mktime](https://devdocs.io/c/chrono/mktime)
+- [strftime](https://devdocs.io/c/chrono/strftime)
+- [time](https://devdocs.io/c/chrono/time)
+- [time_t](https://devdocs.io/c/chrono/time_t)
+- [timespec](https://devdocs.io/c/chrono/timespec)
+- [timespec_get](https://devdocs.io/c/chrono/timespec_get)
+- [tm](https://devdocs.io/c/chrono/tm)
+- [wcsftime](https://devdocs.io/c/chrono/wcsftime)
 
 ## Dynamic memory management
 
-### aligned_alloc
-
-### calloc
-
-```c
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    int *p1 = calloc(4, sizeof(int));    // allocate and zero out an array of 4 int
-    int *p2 = calloc(1, sizeof(int[4])); // same, naming the array type directly
-    int *p3 = calloc(4, sizeof *p3);     // same, without repeating the type name
-
-    if(p2) {
-        for(int n=0; n<4; ++n) // print the array
-            printf("p2[%d] == %d\n", n, p2[n]);
-    }
-
-    free(p1);
-    free(p2);
-    free(p3);
-}
-
-```
-
-### free
-### malloc
-### realloc
-
-```c
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    int *pa = malloc(10 * sizeof *pa); // allocate an array of 10 int
-    if(pa) {
-        printf("%zu bytes allocated. Storing ints: ", 10*sizeof(int));
-        for(int n = 0; n < 10; ++n)
-            printf("%d ", pa[n] = n);
-    }
-
-    int *pb = realloc(pa, 1000000 * sizeof *pb); // reallocate array to a larger size
-    if(pb) {
-        printf("\n%zu bytes allocated, first 10 ints are: ", 1000000*sizeof(int));
-        for(int n = 0; n < 10; ++n)
-            printf("%d ", pb[n]); // show the array
-        free(pb);
-    } else { // if realloc failed, the original pointer needs to be freed
-        free(pa);
-    }
-}
-
-```
-
-## File
-
-### clearerr
-
-```c
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-
-int main(void)
-{
-    FILE* tmpf = tmpfile();
-    fputs("abcde\n", tmpf);
-    rewind(tmpf);
-    int ch;
-    while ((ch=fgetc(tmpf)) != EOF)
-          printf("%c", ch);
-    assert(feof(tmpf)); // the loop is expected to terminate by eof
-    puts("End of file reached");
-
-    clearerr(tmpf);  // clear eof
-
-    if (feof(tmpf))
-        puts("EOF indicator set");
-    else
-        puts("EOF indicator cleared\n");
-}
-
-```
-
-### fclose
-
-Closes the given file stream. Any unwritten buffered data are flushed to the OS. Any unread buffered data are discarded.
-
-Whether or not the operation succeeds, the stream is no longer associated with a file, and the buffer allocated by `setbuf` or `setvbuf`, if any, is also disassociated and deallocated if automatic allocation was used.
-
-The behavior is undefined if the value of the pointer stream is used after fclose returns.
-
-### feof
-
-Checks if the end of the given file stream has been reached.
-
-### ferror
-
-Checks the given stream for errors.
-
-### fflush
-
-For output streams (and for update streams on which the last operation was output), writes any unwritten data from the stream's buffer to the associated output device.
-
-For input streams (and for update streams on which the last operation was input), the behavior is undefined.
-
-If stream is a null pointer, all open output streams are flushed, including the ones manipulated within library packages or otherwise not directly accessible to the program.
-
-### fgetc
-
-Reads the next character from the given input stream. `getc()` may be implemented as a macro.
-
-### fgetpos
-
-Obtains the file position indicator and the current parse state (if any) for the file stream stream and stores them in the object pointed to by pos. The value stored is only meaningful as the input to `fsetpos`.
-
-```c
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-
-int main(void)
-{
-    // prepare a file holding 4 values of type double
-    enum {SIZE = 4};
-    FILE* fp = fopen("test.bin", "wb");
-    assert(fp);
-    int rc = fwrite((double[SIZE]){1.1, 2.2, 3.3, 4.4}, sizeof(double), SIZE, fp);
-    assert(rc == SIZE);
-    fclose(fp);
-
-    // demo using fsetpos to return to the beginning of a file
-    fp = fopen("test.bin", "rb");
-    fpos_t pos;
-    fgetpos(fp, &pos);               // store start of file in pos
-    double d;
-    rc = fread(&d, sizeof d, 1, fp); // read the first double
-    assert(rc == 1);
-    printf("First value in the file: %.1f\n", d);
-    fsetpos(fp,&pos);                 // move file position back to the start of the file
-    rc = fread(&d, sizeof d, 1, fp);  // read the first double again
-    assert(rc == 1);
-    printf("First value in the file again: %.1f\n", d);
-    fclose(fp);
-
-    // demo error handling
-    rc = fsetpos(stdin, &pos);
-    if(rc) perror("could not fsetpos stdin");
-}
-
-```
-
-### fgets
-
-Reads at most count - 1 characters from the given file stream and stores them in the character array pointed to by str. Parsing stops if end-of-file occurs or a newline character is found, in which case str will contain that newline character. If no errors occur, writes a null character at the position immediately after the last character written to str.
-
-The behavior is undefined if count is less than 1.
-
-### fopen_s
-
-```
-
-errno_t fopen_s(FILE *restrict *restrict streamptr,
-                const char *restrict filename,
-                const char *restrict mode);
-
-```
-
-1. Opens a file indicated by filename and returns a pointer to the file stream associated with that file. mode is used to determine the file access mode.
-2. Same as (1), except that the pointer to the file stream is written to streamptr and the following errors are detected at runtime and call the currently installed constraint handler function:
-
-	- streamptr is a null pointer
-	- filename is a null pointer
-	- mode is a null pointer	
-
-	As with all bounds-checked functions, `fopen_s` is only guaranteed to be available if `__STDC_LIB_EXT1__` is defined by the implementation and if the user defines `__STDC_WANT_LIB_EXT1__` to the integer constant 1 before including `stdio.h`.
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    FILE* fp = fopen("test.txt", "r");
-    if(!fp) {
-        perror("File opening failed");
-        return EXIT_FAILURE;
-    }
-
-    int c; // note: int, not char, required to handle EOF
-    while ((c = fgetc(fp)) != EOF) { // standard C I/O file reading loop
-       putchar(c);
-    }
-
-    if (ferror(fp))
-        puts("I/O error when reading");
-    else if (feof(fp))
-        puts("End of file reached successfully");
-
-    fclose(fp);
-}
-```
-
-### fprintf_s
-
-Loads the data from the given locations, converts them to character string equivalents and writes the results to a variety of sinks.
-
-### fputc
-
-Writes a character ch to the given output stream stream. putc() may be implemented as a macro and evaluate stream more than once, so the corresponding argument should never be an expression with side effects.
-
-Internally, the character is converted to unsigned char just before being written.
-
-### fputs
-
-Writes every character from the null-terminated string str to the output stream stream, as if by repeatedly executing fputc.
-
-The terminating null character from str is not written.
-
-### fread
-
-Reads up to count objects into the array buffer from the given input stream stream as if by calling fgetc size times for each object, and storing the results, in the order obtained, into the successive positions of buffer, which is reinterpreted as an array of unsigned char. The file position indicator for the stream is advanced by the number of characters read.
-
-If an error occurs, the resulting value of the file position indicator for the stream is indeterminate. If a partial element is read, its value is indeterminate.
-
-### freopen_s
-
-First, attempts to close the file associated with stream, ignoring any errors. Then, if filename is not null, attempts to open the file specified by filename using mode as if by fopen, and associates that file with the file stream pointed to by stream. If filename is a null pointer, then the function attempts to reopen the file that is already associated with stream (it is implementation defined which mode changes are allowed in this case).
-
-### fscanf_s
-
-Reads data from the a variety of sources, interprets it according to format and stores the results into given locations.
-
-### fseek
-
-Sets the file position indicator for the file stream stream to the value pointed to by offset.
-
-If the stream is open in binary mode, the new position is exactly offset bytes measured from the beginning of the file if origin is SEEK_SET, from the current file position if origin is SEEK_CUR, and from the end of the file if origin is SEEK_END. Binary streams are not required to support SEEK_END, in particular if additional null bytes are output.
-
-If the stream is open in text mode, the only supported values for offset are zero (which works with any origin) and a value returned by an earlier call to ftell on a stream associated with the same file (which only works with origin of SEEK_SET).
-
-If the stream is wide-oriented, the restrictions of both text and binary streams apply (result of ftell is allowed with SEEK_SET and zero offset is allowed from SEEK_SET and SEEK_CUR, but not SEEK_END).
-
-In addition to changing the file position indicator, fseek undoes the effects of ungetc and clears the end-of-file status, if applicable.
-
-If a read or write error occurs, the error indicator for the stream (ferror) is set and the file position is unaffected.
-
-### fsetpos
-
-Sets the file position indicator and the multibyte parsing state (if any) for the file stream stream according to the value pointed to by pos.
-
-Besides establishing new parse state and position, a call to this function undoes the effects of ungetc and clears the end-of-file state, if it is set.
-
-If a read or write error occurs, the error indicator (ferror) for the stream is set.
-
-### ftell
-
-Returns the file position indicator for the file stream stream.
-
-If the stream is open in binary mode, the value obtained by this function is the number of bytes from the beginning of the file.
-
-If the stream is open in text mode, the value returned by this function is unspecified and is only meaningful as the input to fseek().
-
-### fwide
-
-If `mode > 0`, attempts to make stream wide-oriented. If `mode < 0`, attempts to make stream byte-oriented. If mode==0, only queries the current orientation of the stream.
-
-If the orientation of the stream has already been decided (by executing output or by an earlier call to fwide), this function does nothing.
-
-### fwrite
-
-Writes count of objects from the given array buffer to the output stream stream. The objects are written as if by reinterpreting each object as an array of unsigned char and calling fputc size times for each object to write those unsigned chars into stream, in order. The file position indicator for the stream is advanced by the number of characters written.
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-enum { SIZE = 5 };
-int main(void)
-{
-    double a[SIZE] = {1, 2, 3, 4, 5};
-    FILE *f1 = fopen("file.bin", "wb");
-    assert(f1);
-    size_t r1 = fwrite(a, sizeof a[0], SIZE, f1);
-    printf("wrote %zu elements out of %d requested\n", r1,  SIZE);
-    fclose(f1);
-
-    double b[SIZE];
-    FILE *f2 = fopen("file.bin", "rb");
-    size_t r2 = fread(b, sizeof b[0], SIZE, f2);
-    fclose(f2);
-    printf("read back: ");
-    for(size_t i = 0; i < r2; i++)
-        printf("%f ", b[i]);
-}
-```
-
-### getc
-### getchar
-### gets
-### gets_s
-### getwchar
-### perror
-### printf
-### printf_s
-### putc
-### putchar
-### puts
-### putwc
-### putwchar
-### remove
-### rename
-### rewind
-
-### scanf_s
-
-Reads data from the a variety of sources, interprets it according to format and stores the results into given locations.
-
-```c
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <stdio.h>
-#include <stddef.h>
-#include <locale.h>
-
-int main(void)
-{
-    int i, j;
-    float x, y;
-    char str1[10], str2[4];
-    wchar_t warr[2];
-    setlocale(LC_ALL, "en_US.utf8");
-
-    char input[] = "25 54.32E-1 Thompson 56789 0123 56ß水";
-    /* parse as follows:
-       %d: an integer
-       %f: a floating-point value
-       %9s: a string of at most 9 non-whitespace characters
-       %2d: two-digit integer (digits 5 and 6)
-       %f:  a floating-point value (digits 7, 8, 9)
-       %*d: an integer which isn't stored anywhere
-       ' ': all consecutive whitespace
-       %3[0-9]: a string of at most 3 decimal digits (digits 5 and 6)
-       %2lc: two wide characters, using multibyte to wide conversion  */
-    int ret = sscanf(input, "%d%f%9s%2d%f%*d %3[0-9]%2lc",
-                     &i, &x, str1, &j, &y, str2, warr);
-
-    printf("Converted %d fields:\ni = %d\nx = %f\nstr1 = %s\n"
-           "j = %d\ny = %f\nstr2 = %s\n"
-           "warr[0] = U+%x warr[1] = U+%x\n",
-           ret, i, x, str1, j, y, str2, warr[0], warr[1]);
-
-#ifdef __STDC_LIB_EXT1__
-    int n = sscanf_s(input, "%d%f%s", &i, &x, str1, (rsize_t)sizeof str1);
-    // writes 25 to i, 5.432 to x, the 9 bytes "thompson\0" to str1, and 3 to n.
-#endif
-}
-```
-
-### setbuf
-
-Sets the internal buffer to use for stream operations. It should be at least BUFSIZ characters long.
-
-```c
-#include <stdio.h>
-#include <threads.h>
-
-int main(void)
-{
-    setbuf(stdout, NULL); // unbuffered stdout
-    putchar('a'); // 'a' appears immediately if stdout is unbuffered
-    thrd_sleep(&(struct timespec){.tv_sec=1}, NULL); // sleep 1 sec
-    putchar('b'); 
-}
-```
-
-### setvbuf
-
-### sprintf_s
-
-```c
-int sprintf_s(char *restrict buffer, rsize_t bufsz,
-              const char *restrict format, ...);
-```
-
-### tmpfile_s 
-
-Creates and opens a temporary file. The file is opened as binary file for update (as if by fopen with "wb+" mode). The filename of the file is guaranteed to be unique within the filesystem. At least TMP_MAX files may be opened during the lifetime of a program (this limit may be shared with tmpnam and may be further limited by FOPEN_MAX).
-
-### tmpnam_s
-
-Creates a unique valid file name (no longer than L_tmpnam in length) and stores it in character string pointed to by filename. The function is capable of generating up to TMP_MAX of unique filenames, but some or all of them may be in use in the filesystem and thus not suitable return values.
-
-### ungetc
-### ungetwc 
-### vfprintf_s
-
-Loads the data from the locations, defined by vlist, converts them to character string equivalents and writes the results to a variety of sinks.
-
-```c
-#include <stdio.h>
-#include <stdarg.h>
-#include <time.h>
-
-void debug_log(const char *fmt, ...)
-{
-    struct timespec ts;
-    timespec_get(&ts, TIME_UTC);
-    char time_buf[100];
-    size_t rc = strftime(time_buf, sizeof time_buf, "%D %T", gmtime(&ts.tv_sec));
-    snprintf(time_buf + rc, sizeof time_buf - rc, ".%06ld UTC", ts.tv_nsec / 1000);
-
-    va_list args1;
-    va_start(args1, fmt);
-    va_list args2;
-    va_copy(args2, args1);
-    char buf[1+vsnprintf(NULL, 0, fmt, args1)];
-    va_end(args1);
-    vsnprintf(buf, sizeof buf, fmt, args2);
-    va_end(args2);
-
-    printf("%s [debug]: %s\n", time_buf, buf);
-}
-
-int main(void)
-{
-    debug_log("Logging, %d, %d, %d", 1, 2, 3);
-}
-```
-
-### vfscanf_s  
-
-### vscanf_s 
-### vsnwprintf_s  
-### vsscanf_s  
-
-## keywords
-
-### auto
-### break
-### case
-### char
-### const
-### continue
-### default
-### do
-### double
-### else
-### enum
-### extern
-### float
-### for
-### fortran
-### goto
-### if
-### inline
-### int
-### long
-### register
-### restrict
-### return
-### short
-### signed
-### sizeof
-### static
-### struct
-### switch
-### typedef
-### union
-### unsigned
-### void
-### volatile
-### while
-### _Alignas
-### _Alignof
-### _Atomic
-### _Bool
-### _Complex
-### _Generic
-### _Imaginary
-### _Noreturn
-### _Static_assert
-### _Thread_local
+- [aligned_alloc](https://devdocs.io/c/memory/aligned_alloc)
+- [calloc](https://devdocs.io/c/memory/calloc)
+- [free](https://devdocs.io/c/memory/free)
+- [malloc](https://devdocs.io/c/memory/malloc)
+- [realloc](https://devdocs.io/c/memory/realloc)
+
+## Error handling
+
+- [abort_handler_s](https://devdocs.io/c/error/abort_handler_s)
+- [assert](https://devdocs.io/c/error/assert)
+- [constraint_handler_t](https://devdocs.io/c/error/set_constraint_handler_s)
+- [errno](https://devdocs.io/c/error/errno)
+- [Error handling](https://devdocs.io/c/error)
+- [Error numbers](https://devdocs.io/c/error/errno_macros)
+- [ignore_handler_s](https://devdocs.io/c/error/ignore_handler_s)
+- [set_constraint_handler_s](https://devdocs.io/c/error/set_constraint_handler_s)
+- [static_assert](https://devdocs.io/c/error/static_assert)
+
+## File input/output
+
+- [clearerr](https://devdocs.io/c/io/clearerr)
+- [fclose](https://devdocs.io/c/io/fclose)
+- [feof](https://devdocs.io/c/io/feof)
+- [ferror](https://devdocs.io/c/io/ferror)
+- [fflush](https://devdocs.io/c/io/fflush)
+- [fgetc](https://devdocs.io/c/io/fgetc)
+- [fgetpos](https://devdocs.io/c/io/fgetpos)
+- [fgets](https://devdocs.io/c/io/fgets)
+- [fgetwc](https://devdocs.io/c/io/fgetwc)
+- [fgetws](https://devdocs.io/c/io/fgetws)
+- [File input/output](https://devdocs.io/c/io)
+- [fopen](https://devdocs.io/c/io/fopen)
+- [fopen_s](https://devdocs.io/c/io/fopen)
+- [fprintf](https://devdocs.io/c/io/fprintf)
+- [fprintf_s](https://devdocs.io/c/io/fprintf)
+- [fputc](https://devdocs.io/c/io/fputc)
+- [fputs](https://devdocs.io/c/io/fputs)
+- [fputwc](https://devdocs.io/c/io/fputwc)
+- [fputws](https://devdocs.io/c/io/fputws)
+- [fread](https://devdocs.io/c/io/fread)
+- [freopen](https://devdocs.io/c/io/freopen)
+- [freopen_s](https://devdocs.io/c/io/freopen)
+- [fscanf](https://devdocs.io/c/io/fscanf)
+- [fscanf_s](https://devdocs.io/c/io/fscanf)
+- [fseek](https://devdocs.io/c/io/fseek)
+- [fsetpos](https://devdocs.io/c/io/fsetpos)
+- [ftell](https://devdocs.io/c/io/ftell)
+- [fwide](https://devdocs.io/c/io/fwide)
+- [fwprintf](https://devdocs.io/c/io/fwprintf)
+- [fwprintf_s](https://devdocs.io/c/io/fwprintf)
+- [fwrite](https://devdocs.io/c/io/fwrite)
+- [fwscanf](https://devdocs.io/c/io/fwscanf)
+- [fwscanf_s](https://devdocs.io/c/io/fwscanf)
+- [getc](https://devdocs.io/c/io/fgetc)
+- [getchar](https://devdocs.io/c/io/getchar)
+- [gets](https://devdocs.io/c/io/gets)
+- [gets_s](https://devdocs.io/c/io/gets)
+- [getwchar](https://devdocs.io/c/io/getwchar)
+- [perror](https://devdocs.io/c/io/perror)
+- [printf](https://devdocs.io/c/io/fprintf)
+- [printf_s](https://devdocs.io/c/io/fprintf)
+- [putc](https://devdocs.io/c/io/fputc)
+- [putchar](https://devdocs.io/c/io/putchar)
+- [puts](https://devdocs.io/c/io/puts)
+- [putwc](https://devdocs.io/c/io/fputwc)
+- [putwchar](https://devdocs.io/c/io/putwchar)
+- [remove](https://devdocs.io/c/io/remove)
+- [rename](https://devdocs.io/c/io/rename)
+- [rewind](https://devdocs.io/c/io/rewind)
+- [scanf](https://devdocs.io/c/io/fscanf)
+- [scanf_s](https://devdocs.io/c/io/fscanf)
+- [setbuf](https://devdocs.io/c/io/setbuf)
+- [setvbuf](https://devdocs.io/c/io/setvbuf)
+- [snprintf](https://devdocs.io/c/io/fprintf)
+- [snprintf_s](https://devdocs.io/c/io/fprintf)
+- [snwprintf_s](https://devdocs.io/c/io/fwprintf)
+- [sprintf](https://devdocs.io/c/io/fprintf)
+- [sprintf_s](https://devdocs.io/c/io/fprintf)
+- [sscanf](https://devdocs.io/c/io/fscanf)
+- [sscanf_s](https://devdocs.io/c/io/fscanf)
+- [swprintf](https://devdocs.io/c/io/fwprintf)
+- [swprintf_s](https://devdocs.io/c/io/fwprintf)
+- [swscanf](https://devdocs.io/c/io/fwscanf)
+- [swscanf_s](https://devdocs.io/c/io/fwscanf)
+- [tmpfile](https://devdocs.io/c/io/tmpfile)
+- [tmpfile_s](https://devdocs.io/c/io/tmpfile)
+- [tmpnam](https://devdocs.io/c/io/tmpnam)
+- [tmpnam_s](https://devdocs.io/c/io/tmpnam)
+- [ungetc](https://devdocs.io/c/io/ungetc)
+- [ungetwc](https://devdocs.io/c/io/ungetwc)
+- [vfprintf](https://devdocs.io/c/io/vfprintf)
+- [vfprintf_s](https://devdocs.io/c/io/vfprintf)
+- [vfscanf](https://devdocs.io/c/io/vfscanf)
+- [vfscanf_s](https://devdocs.io/c/io/vfscanf)
+- [vfwprintf](https://devdocs.io/c/io/vfwprintf)
+- [vfwprintf_s](https://devdocs.io/c/io/vfwprintf)
+- [vfwscanf](https://devdocs.io/c/io/vfwscanf)
+- [vfwscanf_s](https://devdocs.io/c/io/vfwscanf)
+- [vprintf](https://devdocs.io/c/io/vfprintf)
+- [vprintf_s](https://devdocs.io/c/io/vfprintf)
+- [vscanf](https://devdocs.io/c/io/vfscanf)
+- [vscanf_s](https://devdocs.io/c/io/vfscanf)
+- [vsnprintf](https://devdocs.io/c/io/vfprintf)
+- [vsnprintf_s](https://devdocs.io/c/io/vfprintf)
+- [vsnwprintf_s](https://devdocs.io/c/io/vfwprintf)
+- [vsprintf](https://devdocs.io/c/io/vfprintf)
+- [vsprintf_s](https://devdocs.io/c/io/vfprintf)
+- [vsscanf](https://devdocs.io/c/io/vfscanf)
+- [vsscanf_s](https://devdocs.io/c/io/vfscanf)
+- [vswprintf](https://devdocs.io/c/io/vfwprintf)
+- [vswprintf_s](https://devdocs.io/c/io/vfwprintf)
+- [vswscanf](https://devdocs.io/c/io/vfwscanf)
+- [vswscanf_s](https://devdocs.io/c/io/vfwscanf)
+- [vwprintf](https://devdocs.io/c/io/vfwprintf)
+- [vwprintf_s](https://devdocs.io/c/io/vfwprintf)
+- [vwscanf](https://devdocs.io/c/io/vfwscanf)
+- [vwscanf_s](https://devdocs.io/c/io/vfwscanf)
+- [wprintf](https://devdocs.io/c/io/fwprintf)
+- [wprintf_s](https://devdocs.io/c/io/fwprintf)
+- [wscanf](https://devdocs.io/c/io/fwscanf)
+- [wscanf_s](https://devdocs.io/c/io/fwscanf)
+
+## Localization support
+
+- [LC_ALL](https://devdocs.io/c/locale/lc_categories)
+- [LC_COLLATE](https://devdocs.io/c/locale/lc_categories)
+- [LC_CTYPE](https://devdocs.io/c/locale/lc_categories)
+- [LC_MONETARY](https://devdocs.io/c/locale/lc_categories)
+- [LC_NUMERIC](https://devdocs.io/c/locale/lc_categories)
+- [LC_TIME](https://devdocs.io/c/locale/lc_categories)
+- [lconv](https://devdocs.io/c/locale/lconv)
+- [localeconv](https://devdocs.io/c/locale/localeconv)
+- [Localization support](https://devdocs.io/c/locale)
+- [setlocale](https://devdocs.io/c/locale/setlocale)
+
+## Numerics
+
+- [_Complex_I](https://devdocs.io/c/numeric/complex/complex_i)
+- [_Imaginary_I](https://devdocs.io/c/numeric/complex/imaginary_i)
+- [abs](https://devdocs.io/c/numeric/math/abs)
+- [acos](https://devdocs.io/c/numeric/math/acos)
+- [acosf](https://devdocs.io/c/numeric/math/acos)
+- [acosh](https://devdocs.io/c/numeric/math/acosh)
+- [acoshf](https://devdocs.io/c/numeric/math/acosh)
+- [acoshl](https://devdocs.io/c/numeric/math/acosh)
+- [acosl](https://devdocs.io/c/numeric/math/acos)
+- [asin](https://devdocs.io/c/numeric/math/asin)
+- [asinf](https://devdocs.io/c/numeric/math/asin)
+- [asinh](https://devdocs.io/c/numeric/math/asinh)
+- [asinhf](https://devdocs.io/c/numeric/math/asinh)
+- [asinhl](https://devdocs.io/c/numeric/math/asinh)
+- [asinl](https://devdocs.io/c/numeric/math/asin)
+- [atan](https://devdocs.io/c/numeric/math/atan)
+- [atan2](https://devdocs.io/c/numeric/math/atan2)
+- [atan2f](https://devdocs.io/c/numeric/math/atan2)
+- [atan2l](https://devdocs.io/c/numeric/math/atan2)
+- [atanf](https://devdocs.io/c/numeric/math/atan)
+- [atanh](https://devdocs.io/c/numeric/math/atanh)
+- [atanhf](https://devdocs.io/c/numeric/math/atanh)
+- [atanhl](https://devdocs.io/c/numeric/math/atanh)
+- [atanl](https://devdocs.io/c/numeric/math/atan)
+- [cabs](https://devdocs.io/c/numeric/complex/cabs)
+- [cabsf](https://devdocs.io/c/numeric/complex/cabs)
+- [cabsl](https://devdocs.io/c/numeric/complex/cabs)
+- [cacos](https://devdocs.io/c/numeric/complex/cacos)
+- [cacosf](https://devdocs.io/c/numeric/complex/cacos)
+- [cacosh](https://devdocs.io/c/numeric/complex/cacosh)
+- [cacoshf](https://devdocs.io/c/numeric/complex/cacosh)
+- [cacoshl](https://devdocs.io/c/numeric/complex/cacosh)
+- [cacosl](https://devdocs.io/c/numeric/complex/cacos)
+- [carg](https://devdocs.io/c/numeric/complex/carg)
+- [cargf](https://devdocs.io/c/numeric/complex/carg)
+- [cargl](https://devdocs.io/c/numeric/complex/carg)
+- [casin](https://devdocs.io/c/numeric/complex/casin)
+- [casinf](https://devdocs.io/c/numeric/complex/casin)
+- [casinh](https://devdocs.io/c/numeric/complex/casinh)
+- [casinhf](https://devdocs.io/c/numeric/complex/casinh)
+- [casinhl](https://devdocs.io/c/numeric/complex/casinh)
+- [casinl](https://devdocs.io/c/numeric/complex/casin)
+- [catan](https://devdocs.io/c/numeric/complex/catan)
+- [catanf](https://devdocs.io/c/numeric/complex/catan)
+- [catanh](https://devdocs.io/c/numeric/complex/catanh)
+- [catanhf](https://devdocs.io/c/numeric/complex/catanh)
+- [catanhl](https://devdocs.io/c/numeric/complex/catanh)
+- [catanl](https://devdocs.io/c/numeric/complex/catan)
+- [cbrt](https://devdocs.io/c/numeric/math/cbrt)
+- [cbrtf](https://devdocs.io/c/numeric/math/cbrt)
+- [cbrtl](https://devdocs.io/c/numeric/math/cbrt)
+- [ccos](https://devdocs.io/c/numeric/complex/ccos)
+- [ccosf](https://devdocs.io/c/numeric/complex/ccos)
+- [ccosh](https://devdocs.io/c/numeric/complex/ccosh)
+- [ccoshf](https://devdocs.io/c/numeric/complex/ccosh)
+- [ccoshl](https://devdocs.io/c/numeric/complex/ccosh)
+- [ccosl](https://devdocs.io/c/numeric/complex/ccos)
+- [ceil](https://devdocs.io/c/numeric/math/ceil)
+- [ceilf](https://devdocs.io/c/numeric/math/ceil)
+- [ceill](https://devdocs.io/c/numeric/math/ceil)
+- [cexp](https://devdocs.io/c/numeric/complex/cexp)
+- [cexpf](https://devdocs.io/c/numeric/complex/cexp)
+- [cexpl](https://devdocs.io/c/numeric/complex/cexp)
+- [cimag](https://devdocs.io/c/numeric/complex/cimag)
+- [cimagf](https://devdocs.io/c/numeric/complex/cimag)
+- [cimagl](https://devdocs.io/c/numeric/complex/cimag)
+- [clog](https://devdocs.io/c/numeric/complex/clog)
+- [clogf](https://devdocs.io/c/numeric/complex/clog)
+- [clogl](https://devdocs.io/c/numeric/complex/clog)
+- [CMPLX](https://devdocs.io/c/numeric/complex/cmplx)
+- [CMPLXF](https://devdocs.io/c/numeric/complex/cmplx)
+- [CMPLXL](https://devdocs.io/c/numeric/complex/cmplx)
+- [Common mathematical functions](https://devdocs.io/c/numeric/math)
+- [Complex number arithmetic](https://devdocs.io/c/numeric/complex)
+- [complex](https://devdocs.io/c/numeric/complex/complex)
+- [conj](https://devdocs.io/c/numeric/complex/conj)
+- [conjf](https://devdocs.io/c/numeric/complex/conj)
+- [conjl](https://devdocs.io/c/numeric/complex/conj)
+- [copysign](https://devdocs.io/c/numeric/math/copysign)
+- [copysignf](https://devdocs.io/c/numeric/math/copysign)
+- [copysignl](https://devdocs.io/c/numeric/math/copysign)
+- [cos](https://devdocs.io/c/numeric/math/cos)
+- [cosf](https://devdocs.io/c/numeric/math/cos)
+- [cosh](https://devdocs.io/c/numeric/math/cosh)
+- [coshf](https://devdocs.io/c/numeric/math/cosh)
+- [coshl](https://devdocs.io/c/numeric/math/cosh)
+- [cosl](https://devdocs.io/c/numeric/math/cos)
+- [cpow](https://devdocs.io/c/numeric/complex/cpow)
+- [cpowf](https://devdocs.io/c/numeric/complex/cpow)
+- [cpowl](https://devdocs.io/c/numeric/complex/cpow)
+- [cproj](https://devdocs.io/c/numeric/complex/cproj)
+- [cprojf](https://devdocs.io/c/numeric/complex/cproj)
+- [cprojl](https://devdocs.io/c/numeric/complex/cproj)
+- [creal](https://devdocs.io/c/numeric/complex/creal)
+- [crealf](https://devdocs.io/c/numeric/complex/creal)
+- [creall](https://devdocs.io/c/numeric/complex/creal)
+- [csin](https://devdocs.io/c/numeric/complex/csin)
+- [csinf](https://devdocs.io/c/numeric/complex/csin)
+- [csinh](https://devdocs.io/c/numeric/complex/csinh)
+- [csinhf](https://devdocs.io/c/numeric/complex/csinh)
+- [csinhl](https://devdocs.io/c/numeric/complex/csinh)
+- [csinl](https://devdocs.io/c/numeric/complex/csin)
+- [csqrt](https://devdocs.io/c/numeric/complex/csqrt)
+- [csqrtf](https://devdocs.io/c/numeric/complex/csqrt)
+- [csqrtl](https://devdocs.io/c/numeric/complex/csqrt)
+- [ctan](https://devdocs.io/c/numeric/complex/ctan)
+- [ctanf](https://devdocs.io/c/numeric/complex/ctan)
+- [ctanh](https://devdocs.io/c/numeric/complex/ctanh)
+- [ctanhf](https://devdocs.io/c/numeric/complex/ctanh)
+- [ctanhl](https://devdocs.io/c/numeric/complex/ctanh)
+- [ctanl](https://devdocs.io/c/numeric/complex/ctan)
+- [div](https://devdocs.io/c/numeric/math/div)
+- [double_t](https://devdocs.io/c/numeric/math/float_t)
+- [erf](https://devdocs.io/c/numeric/math/erf)
+- [erfc](https://devdocs.io/c/numeric/math/erfc)
+- [erfcf](https://devdocs.io/c/numeric/math/erfc)
+- [erfcl](https://devdocs.io/c/numeric/math/erfc)
+- [erff](https://devdocs.io/c/numeric/math/erf)
+- [erfl](https://devdocs.io/c/numeric/math/erf)
+- [exp](https://devdocs.io/c/numeric/math/exp)
+- [exp2](https://devdocs.io/c/numeric/math/exp2)
+- [exp2f](https://devdocs.io/c/numeric/math/exp2)
+- [exp2l](https://devdocs.io/c/numeric/math/exp2)
+- [expf](https://devdocs.io/c/numeric/math/exp)
+- [expl](https://devdocs.io/c/numeric/math/exp)
+- [expm1](https://devdocs.io/c/numeric/math/expm1)
+- [expm1f](https://devdocs.io/c/numeric/math/expm1)
+- [expm1l](https://devdocs.io/c/numeric/math/expm1)
+- [fabs](https://devdocs.io/c/numeric/math/fabs)
+- [fabsf](https://devdocs.io/c/numeric/math/fabs)
+- [fabsl](https://devdocs.io/c/numeric/math/fabs)
+- [fdim](https://devdocs.io/c/numeric/math/fdim)
+- [FE_ALL_EXCEPT](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_DFL_ENV](https://devdocs.io/c/numeric/fenv/fe_dfl_env)
+- [FE_DIVBYZERO](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_DOWNWARD](https://devdocs.io/c/numeric/fenv/fe_round)
+- [FE_INEXACT](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_INVALID](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_OVERFLOW](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_TONEAREST](https://devdocs.io/c/numeric/fenv/fe_round)
+- [FE_TOWARDZERO](https://devdocs.io/c/numeric/fenv/fe_round)
+- [FE_UNDERFLOW](https://devdocs.io/c/numeric/fenv/fe_exceptions)
+- [FE_UPWARD](https://devdocs.io/c/numeric/fenv/fe_round)
+- [feclearexcept](https://devdocs.io/c/numeric/fenv/feclearexcept)
+- [fegetenv](https://devdocs.io/c/numeric/fenv/feenv)
+- [fegetexceptflag](https://devdocs.io/c/numeric/fenv/feexceptflag)
+- [fegetround](https://devdocs.io/c/numeric/fenv/feround)
+- [feholdexcept](https://devdocs.io/c/numeric/fenv/feholdexcept)
+- [feraiseexcept](https://devdocs.io/c/numeric/fenv/feraiseexcept)
+- [fesetenv](https://devdocs.io/c/numeric/fenv/feenv)
+- [fesetexceptflag](https://devdocs.io/c/numeric/fenv/feexceptflag)
+- [fesetround](https://devdocs.io/c/numeric/fenv/feround)
+- [fetestexcept](https://devdocs.io/c/numeric/fenv/fetestexcept)
+- [feupdateenv](https://devdocs.io/c/numeric/fenv/feupdateenv)
+- [float_t](https://devdocs.io/c/numeric/math/float_t)
+- [Floating-point environment](https://devdocs.io/c/numeric/fenv)
+- [floor](https://devdocs.io/c/numeric/math/floor)
+- [floorf](https://devdocs.io/c/numeric/math/floor)
+- [floorl](https://devdocs.io/c/numeric/math/floor)
+- [fma](https://devdocs.io/c/numeric/math/fma)
+- [fmaf](https://devdocs.io/c/numeric/math/fma)
+- [fmal](https://devdocs.io/c/numeric/math/fma)
+- [fmax](https://devdocs.io/c/numeric/math/fmax)
+- [fmaxf](https://devdocs.io/c/numeric/math/fmax)
+- [fmaxl](https://devdocs.io/c/numeric/math/fmax)
+- [fmin](https://devdocs.io/c/numeric/math/fmin)
+- [fminf](https://devdocs.io/c/numeric/math/fmin)
+- [fminl](https://devdocs.io/c/numeric/math/fmin)
+- [fmod](https://devdocs.io/c/numeric/math/fmod)
+- [fmodf](https://devdocs.io/c/numeric/math/fmod)
+- [fmodl](https://devdocs.io/c/numeric/math/fmod)
+- [FP_INFINITE](https://devdocs.io/c/numeric/math/fp_categories)
+- [FP_NAN](https://devdocs.io/c/numeric/math/fp_categories)
+- [FP_NORMAL](https://devdocs.io/c/numeric/math/fp_categories)
+- [FP_SUBNORMAL](https://devdocs.io/c/numeric/math/fp_categories)
+- [FP_ZERO](https://devdocs.io/c/numeric/math/fp_categories)
+- [fpclassify](https://devdocs.io/c/numeric/math/fpclassify)
+- [frexp](https://devdocs.io/c/numeric/math/frexp)
+- [frexpf](https://devdocs.io/c/numeric/math/frexp)
+- [frexpl](https://devdocs.io/c/numeric/math/frexp)
+- [HUGE_VAL](https://devdocs.io/c/numeric/math/huge_val)
+- [HUGE_VALF](https://devdocs.io/c/numeric/math/huge_val)
+- [HUGE_VALL](https://devdocs.io/c/numeric/math/huge_val)
+- [hypot](https://devdocs.io/c/numeric/math/hypot)
+- [hypotf](https://devdocs.io/c/numeric/math/hypot)
+- [hypotl](https://devdocs.io/c/numeric/math/hypot)
+- [I](https://devdocs.io/c/numeric/complex/i)
+- [ilogb](https://devdocs.io/c/numeric/math/ilogb)
+- [ilogbf](https://devdocs.io/c/numeric/math/ilogb)
+- [ilogbl](https://devdocs.io/c/numeric/math/ilogb)
+- [imaginary](https://devdocs.io/c/numeric/complex/imaginary)
+- [imaxabs](https://devdocs.io/c/numeric/math/abs)
+- [imaxdiv](https://devdocs.io/c/numeric/math/div)
+- [INFINITY](https://devdocs.io/c/numeric/math/infinity)
+- [isfinite](https://devdocs.io/c/numeric/math/isfinite)
+- [isgreater](https://devdocs.io/c/numeric/math/isgreater)
+- [isgreaterequal](https://devdocs.io/c/numeric/math/isgreaterequal)
+- [isinf](https://devdocs.io/c/numeric/math/isinf)
+- [isless](https://devdocs.io/c/numeric/math/isless)
+- [islessequal](https://devdocs.io/c/numeric/math/islessequal)
+- [islessgreater](https://devdocs.io/c/numeric/math/islessgreater)
+- [isnan](https://devdocs.io/c/numeric/math/isnan)
+- [isnormal](https://devdocs.io/c/numeric/math/isnormal)
+- [isunordered](https://devdocs.io/c/numeric/math/isunordered)
+- [labs](https://devdocs.io/c/numeric/math/abs)
+- [ldexp](https://devdocs.io/c/numeric/math/ldexp)
+- [ldexpf](https://devdocs.io/c/numeric/math/ldexp)
+- [ldexpl](https://devdocs.io/c/numeric/math/ldexp)
+- [ldiv](https://devdocs.io/c/numeric/math/div)
+- [lgamma](https://devdocs.io/c/numeric/math/lgamma)
+- [lgammaf](https://devdocs.io/c/numeric/math/lgamma)
+- [lgammal](https://devdocs.io/c/numeric/math/lgamma)
+- [llabs](https://devdocs.io/c/numeric/math/abs)
+- [lldiv](https://devdocs.io/c/numeric/math/div)
+- [llrint](https://devdocs.io/c/numeric/math/rint)
+- [llrintf](https://devdocs.io/c/numeric/math/rint)
+- [llrintl](https://devdocs.io/c/numeric/math/rint)
+- [llround](https://devdocs.io/c/numeric/math/round)
+- [llroundf](https://devdocs.io/c/numeric/math/round)
+- [llroundl](https://devdocs.io/c/numeric/math/round)
+- [log](https://devdocs.io/c/numeric/math/log)
+- [log10](https://devdocs.io/c/numeric/math/log10)
+- [log10f](https://devdocs.io/c/numeric/math/log10)
+- [log10l](https://devdocs.io/c/numeric/math/log10)
+- [log1p](https://devdocs.io/c/numeric/math/log1p)
+- [log1pf](https://devdocs.io/c/numeric/math/log1p)
+- [log1pl](https://devdocs.io/c/numeric/math/log1p)
+- [log2](https://devdocs.io/c/numeric/math/log2)
+- [log2f](https://devdocs.io/c/numeric/math/log2)
+- [log2l](https://devdocs.io/c/numeric/math/log2)
+- [logb](https://devdocs.io/c/numeric/math/logb)
+- [logbf](https://devdocs.io/c/numeric/math/logb)
+- [logbl](https://devdocs.io/c/numeric/math/logb)
+- [logf](https://devdocs.io/c/numeric/math/log)
+- [logl](https://devdocs.io/c/numeric/math/log)
+- [lrint](https://devdocs.io/c/numeric/math/rint)
+- [lrintf](https://devdocs.io/c/numeric/math/rint)
+- [lrintl](https://devdocs.io/c/numeric/math/rint)
+- [lround](https://devdocs.io/c/numeric/math/round)
+- [lroundf](https://devdocs.io/c/numeric/math/round)
+- [lroundl](https://devdocs.io/c/numeric/math/round)
+- [MATH_ERREXCEPT](https://devdocs.io/c/numeric/math/math_errhandling)
+- [math_errhandling](https://devdocs.io/c/numeric/math/math_errhandling)
+- [MATH_ERRNO](https://devdocs.io/c/numeric/math/math_errhandling)
+- [modf](https://devdocs.io/c/numeric/math/modf)
+- [modff](https://devdocs.io/c/numeric/math/modf)
+- [modfl](https://devdocs.io/c/numeric/math/modf)
+- [NAN](https://devdocs.io/c/numeric/math/nan)
+- [nan](https://devdocs.io/c/numeric/math/nan.2)
+- [nanf](https://devdocs.io/c/numeric/math/nan.2)
+- [nanl](https://devdocs.io/c/numeric/math/nan.2)
+- [nearbyint](https://devdocs.io/c/numeric/math/nearbyint)
+- [nearbyintf](https://devdocs.io/c/numeric/math/nearbyint)
+- [nearbyintl](https://devdocs.io/c/numeric/math/nearbyint)
+- [nextafter](https://devdocs.io/c/numeric/math/nexttoward)
+- [nextafterf](https://devdocs.io/c/numeric/math/nexttoward)
+- [nextafterl](https://devdocs.io/c/numeric/math/nexttoward)
+- [nexttoward](https://devdocs.io/c/numeric/math/nexttoward)
+- [nexttowardf](https://devdocs.io/c/numeric/math/nexttoward)
+- [nexttowardl](https://devdocs.io/c/numeric/math/nexttoward)
+- [Numerics](https://devdocs.io/c/numeric)
+- [pow](https://devdocs.io/c/numeric/math/pow)
+- [powf](https://devdocs.io/c/numeric/math/pow)
+- [powl](https://devdocs.io/c/numeric/math/pow)
+- [Pseudo-random number generation](https://devdocs.io/c/numeric/random)
+- [rand](https://devdocs.io/c/numeric/random/rand)
+- [RAND_MAX](https://devdocs.io/c/numeric/random/rand_max)
+- [remainder](https://devdocs.io/c/numeric/math/remainder)
+- [remainderf](https://devdocs.io/c/numeric/math/remainder)
+- [remainderl](https://devdocs.io/c/numeric/math/remainder)
+- [remquo](https://devdocs.io/c/numeric/math/remquo)
+- [remquof](https://devdocs.io/c/numeric/math/remquo)
+- [remquol](https://devdocs.io/c/numeric/math/remquo)
+- [rint](https://devdocs.io/c/numeric/math/rint)
+- [rintf](https://devdocs.io/c/numeric/math/rint)
+- [rintl](https://devdocs.io/c/numeric/math/rint)
+- [round](https://devdocs.io/c/numeric/math/round)
+- [roundf](https://devdocs.io/c/numeric/math/round)
+- [roundl](https://devdocs.io/c/numeric/math/round)
+- [scalbln](https://devdocs.io/c/numeric/math/scalbn)
+- [scalblnf](https://devdocs.io/c/numeric/math/scalbn)
+- [scalblnl](https://devdocs.io/c/numeric/math/scalbn)
+- [scalbn](https://devdocs.io/c/numeric/math/scalbn)
+- [scalbnf](https://devdocs.io/c/numeric/math/scalbn)
+- [scalbnl](https://devdocs.io/c/numeric/math/scalbn)
+- [signbit](https://devdocs.io/c/numeric/math/signbit)
+- [sin](https://devdocs.io/c/numeric/math/sin)
+- [sinf](https://devdocs.io/c/numeric/math/sin)
+- [sinh](https://devdocs.io/c/numeric/math/sinh)
+- [sinhf](https://devdocs.io/c/numeric/math/sinh)
+- [sinhl](https://devdocs.io/c/numeric/math/sinh)
+- [sinl](https://devdocs.io/c/numeric/math/sin)
+- [sqrt](https://devdocs.io/c/numeric/math/sqrt)
+- [sqrtf](https://devdocs.io/c/numeric/math/sqrt)
+- [sqrtl](https://devdocs.io/c/numeric/math/sqrt)
+- [srand](https://devdocs.io/c/numeric/random/srand)
+- [tan](https://devdocs.io/c/numeric/math/tan)
+- [tanf](https://devdocs.io/c/numeric/math/tan)
+- [tanh](https://devdocs.io/c/numeric/math/tanh)
+- [tanhf](https://devdocs.io/c/numeric/math/tanh)
+- [tanhl](https://devdocs.io/c/numeric/math/tanh)
+- [tanl](https://devdocs.io/c/numeric/math/tan)
+- [tgamma](https://devdocs.io/c/numeric/math/tgamma)
+- [tgammaf](https://devdocs.io/c/numeric/math/tgamma)
+- [tgammal](https://devdocs.io/c/numeric/math/tgamma)
+- [trunc](https://devdocs.io/c/numeric/math/trunc)
+- [truncf](https://devdocs.io/c/numeric/math/trunc)
+- [truncl](https://devdocs.io/c/numeric/math/trunc)
+- [Type-generic math](https://devdocs.io/c/numeric/tgmath)
+
+## Program support
+
+- [_Exit](https://devdocs.io/c/program/_exit)
+- [abort](https://devdocs.io/c/program/abort)
+- [at_quick_exit](https://devdocs.io/c/program/at_quick_exit)
+- [atexit](https://devdocs.io/c/program/atexit)
+- [exit](https://devdocs.io/c/program/exit)
+- [EXIT_FAILURE](https://devdocs.io/c/program/exit_status)
+- [EXIT_SUCCESS](https://devdocs.io/c/program/exit_status)
+- [getenv](https://devdocs.io/c/program/getenv)
+- [getenv_s](https://devdocs.io/c/program/getenv)
+- [jmp_buf](https://devdocs.io/c/program/jmp_buf)
+- [longjmp](https://devdocs.io/c/program/longjmp)
+- [Program support utilities](https://devdocs.io/c/program)
+- [quick_exit](https://devdocs.io/c/program/quick_exit)
+- [raise](https://devdocs.io/c/program/raise)
+- [setjmp](https://devdocs.io/c/program/setjmp)
+- [sig_atomic_t](https://devdocs.io/c/program/sig_atomic_t)
+- [SIG_DFL](https://devdocs.io/c/program/sig_strategies)
+- [SIG_ERR](https://devdocs.io/c/program/sig_err)
+- [SIG_IGN](https://devdocs.io/c/program/sig_strategies)
+- [SIGABRT](https://devdocs.io/c/program/sig_types)
+- [SIGFPE](https://devdocs.io/c/program/sig_types)
+- [SIGILL](https://devdocs.io/c/program/sig_types)
+- [SIGINT](https://devdocs.io/c/program/sig_types)
+- [signal](https://devdocs.io/c/program/signal)
+- [SIGSEGV](https://devdocs.io/c/program/sig_types)
+- [SIGTERM](https://devdocs.io/c/program/sig_types)
+- [system](https://devdocs.io/c/program/system)
 
 ## Strings
 
-### atof
-
-Interprets a floating-point value in a byte string pointed to by str.
-
-```c
-#include <stdlib.h>
-#include <stdio.h>
-
-int main(void)
-{
-    printf("%g\n", atof("  -0.0000000123junk"));
-    printf("%g\n", atof("0.012"));
-    printf("%g\n", atof("15e16"));
-    printf("%g\n", atof("-0x1afp-2"));
-    printf("%g\n", atof("inF"));
-    printf("%g\n", atof("Nan"));
-    printf("%g\n", atof("1.0e+309"));   // UB: out of range of double
-    printf("%g\n", atof("0.0"));
-    printf("%g\n", atof("junk"));       // no conversion can be performed
-}
-/*
--1.23e-08
-0.012
-1.5e+17
--107.75
-inf
-nan
-inf
-0
-0
-*/
-```
-
-### atoi
-
-Interprets an integer value in a byte string pointed to by str.
-
-### btowc
-
-Widens a single-byte character c (reinterpreted as unsigned char) to its wide character equivalent.
-
-Most multibyte character encodings use single-byte codes to represent the characters from the ASCII character set. This function may be used to convert such characters to wchar_t.
-
-### c32rtomb
-
-Converts a single code point from its variable-length 32-bit wide character representation (but typically, UTF-32) to its narrow multibyte character representation.
-
-### char32_t
-
-char32_t is an unsigned integer type used for 32-bit wide characters and is the same type as uint_least32_t.
-
-uint_least32_t is the smallest unsigned integer type with width of at least 32 bits.
-
-### isalnum
-
-Checks if the given character is an alphanumeric character as classified by the current C locale. In the default locale, the following characters are alphanumeric:
-
-- digits (`0123456789`)
-- uppercase letters (`ABCDEFGHIJKLMNOPQRSTUVWXYZ`)
-- lowercase letters (`abcdefghijklmnopqrstuvwxyz`)
-
-The behavior is undefined if the value of `ch` is not representable as `unsigned char` and is not equal to `EOF`.
-
-### isblank
-
-Checks if the given character is a blank character in the current C locale. In the default C locale, only space (0x20) and horizontal tab (0x09) are classified as blank.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### iscntrl
-
-Checks if the given character is a control character, i.e. codes 0x00-0x1F and 0x7F.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### isdigit
-
-Checks if the given character is a numeric character (0123456789).
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### isgraph
-
-Checks if the given character has a graphical representation, i.e. it is either a number (0123456789), an uppercase letter (ABCDEFGHIJKLMNOPQRSTUVWXYZ), a lowercase letter (abcdefghijklmnopqrstuvwxyz), or a punctuation character(<code>!"#$%&'()*+,-./:;<=>?@[\]^_&#96;{|}~</code>), or any graphical character specific to the current C locale.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### islower
-
-Checks if the given character is classified as a lowercase character according to the current C locale. In the default "C" locale, islower returns true only for the lowercase letters (abcdefghijklmnopqrstuvwxyz).
-
-If islower returns true, it is guaranteed that iscntrl, isdigit, ispunct, and isspace return false for the same character in the same C locale.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### isprint
-
-Checks if the given character can be printed, i.e. it is either a number (0123456789), an uppercase letter (ABCDEFGHIJKLMNOPQRSTUVWXYZ), a lowercase letter (abcdefghijklmnopqrstuvwxyz), a punctuation character(<code>!"#$%&'()*+,-./:;<=>?@[\]^_&#96;{|}~</code>), or space, or any character classified as printable by the current C locale.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### isspace
-
-Checks if the given character is a whitespace character, i.e. either space (0x20), form feed (0x0c), line feed (0x0a), carriage return (0x0d), horizontal tab (0x09) or vertical tab (0x0b).
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### isxdigit
-
-Checks if the given character is a hexadecimal numeric character (0123456789abcdefABCDEF) or is classified as a hexadecimal character.
-
-The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF.
-
-### mblen
-
-Determines the size, in bytes, of the multibyte character whose first byte is pointed to by s.
-
-If s is a null pointer, resets the global conversion state and determined whether shift sequences are used.
-
-This function is equivalent to the call `mbtowc((wchar_t*)0, s, n)`, except that conversion state of mbtowc is unaffected.
-
-### mbrlen
-### mbrtoc16
-### mbrtoc32
-### mbrtowc
-### mbsinit
-### mbsrtowcs
-### mbsrtowcs_s
-### mbstate_t
-### mbstowcs
-### mbstowcs_s
-### mbtowc
-### memchr
-### memcmp 
-### memcpy_s
-
-Copies count characters from the object pointed to by src to the object pointed to by dest. Both objects are interpreted as arrays of unsigned char.
-
-The behavior is undefined if access occurs beyond the end of the dest array. If the objects overlap (which is a violation of the restrict contract) (since C99), the behavior is undefined. The behavior is undefined if either dest or src is a null pointer.
-
-### memmove_s
-
-Copies count characters from the object pointed to by src to the object pointed to by dest. Both objects are interpreted as arrays of unsigned char. The objects may overlap: copying takes place as if the characters were copied to a temporary character array and then the characters were copied from the array to dest.
-
-The behavior is undefined if access occurs beyond the end of the dest array. The behavior is undefined if either dest or src is a null pointer.
-
-```c
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <stdio.h>
-#include <stdint.h>
-#include <inttypes.h>
-#include <string.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    char str[] = "1234567890";
-    puts(str);
-    memmove(str+4, str+3, 3); // copy from [4,5,6] to [5,6,7]
-    puts(str);
-
-    // setting effective type of allocated memory to be int
-    int *p = malloc(3*sizeof(int));   // allocated memory has no effective type
-    int arr[3] = {1,2,3};
-    memmove(p,arr,3*sizeof(int));     // allocated memory now has an effective type
-
-    // reinterpreting data
-    double d = 0.1;
-//    int64_t n = *(int64_t*)(&d); // strict aliasing violation
-    int64_t n;
-    memmove(&n, &d, sizeof d); // OK
-    printf("%a is %" PRIx64 " as an int64_t\n", d, n);
-
-#ifdef __STDC_LIB_EXT1__
-    set_constraint_handler_s(ignore_handler_s);
-    char src[] = "aaaaaaaaaa";
-    char dst[] = "xyxyxyxyxy";
-    int r = memmove_s(dst,sizeof dst,src,5);
-    printf("dst = \"%s\", r = %d\n", dst,r);
-    r = memmove_s(dst,5,src,10);            //  count is greater than destsz  
-    printf("dst = \"");
-    for(size_t ndx=0; ndx<sizeof dst; ++ndx) {
-        char c = dst[ndx];
-        c ? printf("%c", c) : printf("\\0");
-    }
-    printf("\", r = %d\n", r);
-#endif
-}
-/*
-1234567890
-1234456890
-0x1.999999999999ap-4 is 3fb999999999999a as an int64_t
-dst = "aaaaayxyxy", r = 0
-dst = "\0\0\0\0\0yxyxy", r = 22
-*/
-```
-
-### memset_s
-
-Copies the value ch (after conversion to unsigned char as if by (unsigned char)ch) into each of the first count characters of the object pointed to by dest.
-
-The behavior is undefined if access occurs beyond the end of the dest array. The behavior is undefined if dest is a null pointer.
-
-```c
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    char str[] = "ghghghghghghghghghghgh";
-    puts(str);
-    memset(str,'a',5);
-    puts(str);
-
-#ifdef __STDC_LIB_EXT1__
-    set_constraint_handler_s(ignore_handler_s);
-    int r = memset_s(str, sizeof str, 'b', 5);
-    printf("str = \"%s\", r = %d\n", str, r);
-    r = memset_s(str, 5, 'c', 10);   // count is greater than destsz  
-    printf("str = \"%s\", r = %d\n", str, r);
-#endif
-}
-
-/*
-ghghghghghghghghghghgh
-aaaaahghghghghghghghgh
-str = "bbbbbhghghghghghghghgh", r = 0
-str = "ccccchghghghghghghghgh", r = 22
-*/
-```
-
-### strcat_s
-
-Appends a copy of the null-terminated byte string pointed to by src to the end of the null-terminated byte string pointed to by dest. The character src[0] replaces the null terminator at the end of dest. The resulting byte string is null-terminated.
-
-The behavior is undefined if the destination array is not large enough for the contents of both src and dest and the terminating null character. The behavior is undefined if the strings overlap. The behavior is undefined if either dest or src is not a pointer to a null-terminated byte string.
-
-### strchr
-
-Finds the first occurrence of ch (after conversion to char as if by (char)ch) in the null-terminated byte string pointed to by str (each character interpreted as unsigned char). The terminating null character is considered to be a part of the string and can be found when searching for '\0'.
-
-The behavior is undefined if str is not a pointer to a null-terminated byte string.
-
-### strcmp
-
-Compares two null-terminated byte strings lexicographically.
-
-The sign of the result is the sign of the difference between the values of the first pair of characters (both interpreted as unsigned char) that differ in the strings being compared.
-
-The behavior is undefined if lhs or rhs are not pointers to null-terminated byte strings.
-
-Negative value if lhs appears before rhs in lexicographical order.
-
-Zero if lhs and rhs compare equal.
-
-Positive value if lhs appears after rhs in lexicographical order.
-
-### strcoll
-
-Compares two null-terminated byte strings according to the current locale as defined by the `LC_COLLATE` category.
-
-### strcpy_s
-
-Copies the null-terminated byte string pointed to by src, including the null terminator, to the character array whose first element is pointed to by dest.
-
-The behavior is undefined if the dest array is not large enough. The behavior is undefined if the strings overlap. The behavior is undefined if either dest is not a pointer to a character array or src is not a pointer to a null-terminated byte string.
-
-### strcspn
-
-Returns the length of the maximum initial segment of the null-terminated byte string pointed to by dest, that consists of only the characters not found in the null-terminated byte string pointed to by src.
-
-The behavior is undefined if either dest or src is not a pointer to a null-terminated byte string.
-
-### strerror_s
-
-Returns a pointer to the textual description of the system error code errnum, identical to the description that would be printed by perror().
-
-errnum is usually acquired from the errno variable, however the function accepts any value of type int. The contents of the string are locale-specific.
-
-The returned string must not be modified by the program, but may be overwritten by a subsequent call to the strerror function. strerror is not required to be thread-safe. Implementations may be returning different pointers to static read-only string literals or may be returning the same pointer over and over, pointing at a static buffer in which strerror places the string.
-
-### strlen
-
-Returns the length of the given null-terminated byte string, that is, the number of characters in a character array whose first element is pointed to by str up to and not including the first null character.
-
-The behavior is undefined if str is not a pointer to a null-terminated byte string.
-
-### strncat_s
-
-Appends at most count characters from the character array pointed to by src, stopping if the null character is found, to the end of the null-terminated byte string pointed to by dest. The character src[0] replaces the null terminator at the end of dest. The terminating null character is always appended in the end (so the maximum number of bytes the function may write is count+1).
-
-The behavior is undefined if the destination array does not have enough space for the contents of both dest and the first count characters of src, plus the terminating null character. The behavior is undefined if the source and destination objects overlap. The behavior is undefined if either dest is not a pointer to a null-terminated byte string or src is not a pointer to a character array,
-
-### strncmp
-
-Compares at most count characters of two possibly null-terminated arrays. The comparison is done lexicographically.
-
-The sign of the result is the sign of the difference between the values of the first pair of characters (both interpreted as unsigned char) that differ in the arrays being compared.
-
-The behavior is undefined when access occurs past the end of either array lhs or rhs. The behavior is undefined when either lhs or rhs is the null pointer.
-
-### strncpy_s
-
-Copies at most count characters of the character array pointed to by src (including the terminating null character, but not any of the characters that follow the null character) to character array pointed to by dest.
-
-If count is reached before the entire array src was copied, the resulting character array is not null-terminated.
-
-If, after copying the terminating null character from src, count is not reached, additional null characters are written to dest until the total of count characters have been written.
-
-The behavior is undefined if the character arrays overlap, if either dest or src is not a pointer to a character array (including if dest or src is a null pointer), if the size of the array pointed to by dest is less than count, or if the size of the array pointed to by src is less than count and it does not contain a null character.
-
-### strnlen_s
-
-Returns the length of the given null-terminated byte string, that is, the number of characters in a character array whose first element is pointed to by str up to and not including the first null character.
-
-The behavior is undefined if str is not a pointer to a null-terminated byte string.
-
-```c
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-    const char str[] = "How many characters does this string contain?";
-
-    printf("without null character: %zu\n", strlen(str));
-    printf("with null character:    %zu\n", sizeof str);
-
-#ifdef __STDC_LIB_EXT1__
-    printf("without null character: %zu\n", strnlen_s(str, sizeof str));
-#endif
-}
-/*
-without null character: 45
-with null character:    46
-without null character: 45
-*/
-```
-
-### strpbrk
-
-Scans the null-terminated byte string pointed to by dest for any character from the null-terminated byte string pointed to by breakset, and returns a pointer to that character.
-
-The behavior is undefined if either dest or breakset is not a pointer to a null-terminated byte string.
-
-```c
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    const char* str = "hello world, friend of mine!";
-    const char* sep = " ,!";
-
-    unsigned int cnt = 0;
-    do {
-       str = strpbrk(str, sep); // find separator
-       if(str) str += strspn(str, sep); // skip separator
-       ++cnt; // increment word count
-    } while(str && *str);
-
-    printf("There are %u words\n", cnt);
-}
-
-// There are 5 words
-```
-
-### strrchr
-
-Finds the last occurrence of ch (after conversion to char as if by (char)ch) in the null-terminated byte string pointed to by str (each character interpreted as unsigned char). The terminating null character is considered to be a part of the string and can be found if searching for '\0'.
-
-The behavior is undefined if str is not a pointer to a null-terminated byte string.
-
-### strspn
-
-Returns the length of the maximum initial segment (span) of the null-terminated byte string pointed to by dest, that consists of only the characters found in the null-terminated byte string pointed to by src.
-
-The behavior is undefined if either dest or src is not a pointer to a null-terminated byte string.
-
-```c
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-    const char *string = "abcde312$#@";
-    const char *low_alpha = "qwertyuiopasdfghjklzxcvbnm";
-
-    size_t spnsz = strspn(string, low_alpha);
-    printf("After skipping initial lowercase letters from '%s'\n"
-           "The remainder is '%s'\n", string, string+spnsz);
-}
-/*
-After skipping initial lowercase letters from 'abcde312$#@'
-The remainder is '312$#@'
-*/
-```
-
-### strstr
-
-Finds the first occurrence of the null-terminated byte string pointed to by substr in the null-terminated byte string pointed to by str. The terminating null characters are not compared.
-
-The behavior is undefined if either str or substr is not a pointer to a null-terminated byte string.
-
-```c
-#include <string.h>
-#include <stdio.h>
-
-void find_str(char const* str, char const* substr) 
-{
-    char* pos = strstr(str, substr);
-    if(pos) {
-        printf("found the string '%s' in '%s' at position: %ld\n", substr, str, pos - str);
-    } else {
-        printf("the string '%s' was not found in '%s'\n", substr, str);
-    }
-}
-
-int main(void) 
-{
-    char* str = "one two three";
-    find_str(str, "two");
-    find_str(str, "");
-    find_str(str, "nine");
-    find_str(str, "n");
-
-    return 0;
-}
-/*
-found the string 'two' in 'one two three' at position: 4
-found the string '' in 'one two three' at position: 0
-the string 'nine' was not found in 'one two three'
-found the string 'n' in 'one two three' at position: 1
-*/
-```
-
-### strtod
-
-Interprets a floating-point value in a byte string pointed to by str.
-
-### strtoimax
-
-Interprets an integer value in a byte string pointed to by nptr.
-
-### strtok_s
-
-```c
-#define __STDC_WANT_LIB_EXT1__ 1
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-    char input[] = "A bird came down the walk";
-    printf("Parsing the input string '%s'\n", input);
-    char *token = strtok(input, " ");
-    while(token) {
-        puts(token);
-        token = strtok(NULL, " ");
-    }
-
-    printf("Contents of the input string now: '");
-    for(size_t n = 0; n < sizeof input; ++n)
-        input[n] ? putchar(input[n]) : fputs("\\0", stdout);
-    puts("'");
-
-#ifdef __STDC_LIB_EXT1__
-    char str[] = "A bird came down the walk";
-    rsize_t strmax = sizeof str;
-    const char *delim = " ";
-    char *next_token;
-    printf("Parsing the input string '%s'\n", str);
-    token = strtok_s(str, &strmax, delim, &next_token);
-    while(token) {
-        puts(token);
-        token = strtok_s(NULL, &strmax, delim, &next_token);
-    }
-
-    printf("Contents of the input string now: '");
-    for(size_t n = 0; n < sizeof str; ++n)
-        str[n] ? putchar(str[n]) : fputs("\\0", stdout);
-    puts("'");
-#endif
-}
-/*
-Parsing the input string 'A bird came down the walk'
-A
-bird
-came
-down
-the
-walk
-Contents of the input string now: 'A\0bird\0came\0down\0the\0walk\0'
-Parsing the input string 'A bird came down the walk'
-A
-bird
-came
-down
-the
-walk
-Contents of the input string now: 'A\0bird\0came\0down\0the\0walk\0'
-*/
-```
-
-### strtol
-
-Interprets an integer value in a byte string pointed to by str.
-
-### strxfrm
-
-Transforms the null-terminated byte string pointed to by src into the implementation-defined form such that comparing two transformed strings with strcmp gives the same result as comparing the original strings with strcoll, in the current C locale.
-
-The first count characters of the transformed string are written to destination, including the terminating null character, and the length of the full transformed string is returned, excluding the terminating null character.
-
-The behavior is undefined if the dest array is not large enough. The behavior is undefined if dest and src overlap.
-
-If count is ​0​, then dest is allowed to be a null pointer.
-
-### wcrtomb_s
-
-```c
-#include <stdio.h>
-#include <locale.h>
-#include <string.h>
-#include <wchar.h>
-#include <stdlib.h>
-
-int main(void)
-{
-    setlocale(LC_ALL, "en_US.utf8");
-    mbstate_t state;
-    memset(&state, 0, sizeof state);
-    wchar_t in[] = L"zß水🍌"; // or "z\u00df\u6c34\U0001F34C"
-    size_t in_sz = sizeof in / sizeof *in;
-
-    printf("Processing %zu wchar_t units: [ ", in_sz);
-    for(size_t n = 0; n < in_sz; ++n) printf("%#x ", (unsigned int)in[n]);
-    puts("]");
-
-    char out[MB_CUR_MAX * in_sz];
-    char *p = out;
-    for(size_t n = 0; n < in_sz; ++n) {
-        int rc = wcrtomb(p, in[n], &state); 
-        if(rc == -1) break;
-        p += rc;
-    }
-
-    size_t out_sz = p - out;
-    printf("into %zu UTF-8 code units: [ ", out_sz);
-    for(size_t x = 0; x < out_sz; ++x) printf("%#x ", +(unsigned char)out[x]);
-    puts("]");
-}
-/*
-Processing 5 wchar_t units: [ 0x7a 0xdf 0x6c34 0x1f34c 0 ]
-into 11 UTF-8 code units: [ 0x7a 0xc3 0x9f 0xe6 0xb0 0xb4 0xf0 0x9f 0x8d 0x8c 0 ]
-*/
-```
-
-### wctob
-
-Narrows a wide character c if its multibyte character equivalent in the initial shift state is a single byte.
-
-This is typically possible for the characters from the ASCII character set, since most multibyte encodings (such as UTF-8) use single bytes to encode those characters.
-
-```c
-#include <locale.h>
-#include <wchar.h>
-#include <stdio.h>
-#include <assert.h>
-
-void try_narrowing(wchar_t c)
-{
-    int cn = wctob(c);
-    if(cn != EOF)
-        printf("%#x narrowed to %#x\n", c, cn);
-    else
-        printf("%#x could not be narrowed\n", c);
-}
-
-int main(void)
-{
-    char* utf_locale_present = setlocale(LC_ALL, "th_TH.utf8");
-    assert(utf_locale_present);
-    puts("In Thai UTF-8 locale:");
-    try_narrowing(L'a');
-    try_narrowing(L'๛');
-
-    char* tis_locale_present = setlocale(LC_ALL, "th_TH.tis620");
-    assert(tis_locale_present);
-    puts("In Thai TIS-620 locale:");
-    try_narrowing(L'a');
-    try_narrowing(L'๛');
-}
-/*
-In Thai UTF-8 locale:
-0x61 narrowed to 0x61
-0xe5b could not be narrowed
-In Thai TIS-620 locale:
-0x61 narrowed to 0x61
-0xe5b narrowed to 0xfb
-*/
-```
-
-### wctomb_s
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-
-void demo(wchar_t wc)
-{
-    printf("State-dependent encoding?   %d\n", wctomb(NULL, wc));
-
-    char mb[MB_CUR_MAX];
-    int len = wctomb(mb,wc);
-    printf("wide char '%lc' -> multibyte char '", wc);
-    for (int idx = 0; idx < len; ++idx)
-        printf("%#2x ", (unsigned char)mb[idx]);
-    printf("'\n");
-}
-
-int main(void)
-{
-    setlocale(LC_ALL, "en_US.utf8");
-    printf("MB_CUR_MAX = %zu\n", MB_CUR_MAX);
-    demo(L'A');
-    demo(L'\u00df');
-    demo(L'\U0001d10b');
-}
-/*
-MB_CUR_MAX = 6
-State-dependent encoding?   0
-wide char 'A' -> multibyte char '0x41 '
-State-dependent encoding?   0
-wide char 'ß' -> multibyte char '0xc3 0x9f '
-State-dependent encoding?   0
-wide char '𝄋' -> multibyte char '0xf0 0x9d 0x84 0x8b '
-*/
-```
+- [atof](https://devdocs.io/c/string/byte/atof)
+- [atoi](https://devdocs.io/c/string/byte/atoi)
+- [atol](https://devdocs.io/c/string/byte/atoi)
+- [atoll](https://devdocs.io/c/string/byte/atoi)
+- [btowc](https://devdocs.io/c/string/multibyte/btowc)
+- [c16rtomb](https://devdocs.io/c/string/multibyte/c16rtomb)
+- [c32rtomb](https://devdocs.io/c/string/multibyte/c32rtomb)
+- [char16_t](https://devdocs.io/c/string/multibyte/char16_t)
+- [char32_t](https://devdocs.io/c/string/multibyte/char32_t)
+- [isalnum](https://devdocs.io/c/string/byte/isalnum)
+- [isalpha](https://devdocs.io/c/string/byte/isalpha)
+- [isblank](https://devdocs.io/c/string/byte/isblank)
+- [iscntrl](https://devdocs.io/c/string/byte/iscntrl)
+- [isdigit](https://devdocs.io/c/string/byte/isdigit)
+- [isgraph](https://devdocs.io/c/string/byte/isgraph)
+- [islower](https://devdocs.io/c/string/byte/islower)
+- [isprint](https://devdocs.io/c/string/byte/isprint)
+- [ispunct](https://devdocs.io/c/string/byte/ispunct)
+- [isspace](https://devdocs.io/c/string/byte/isspace)
+- [isupper](https://devdocs.io/c/string/byte/isupper)
+- [iswalnum](https://devdocs.io/c/string/wide/iswalnum)
+- [iswalpha](https://devdocs.io/c/string/wide/iswalpha)
+- [iswblank](https://devdocs.io/c/string/wide/iswblank)
+- [iswcntrl](https://devdocs.io/c/string/wide/iswcntrl)
+- [iswctype](https://devdocs.io/c/string/wide/iswctype)
+- [iswdigit](https://devdocs.io/c/string/wide/iswdigit)
+- [iswgraph](https://devdocs.io/c/string/wide/iswgraph)
+- [iswlower](https://devdocs.io/c/string/wide/iswlower)
+- [iswprint](https://devdocs.io/c/string/wide/iswprint)
+- [iswpunct](https://devdocs.io/c/string/wide/iswpunct)
+- [iswspace](https://devdocs.io/c/string/wide/iswspace)
+- [iswupper](https://devdocs.io/c/string/wide/iswupper)
+- [iswxdigit](https://devdocs.io/c/string/wide/iswxdigit)
+- [isxdigit](https://devdocs.io/c/string/byte/isxdigit)
+- [mblen](https://devdocs.io/c/string/multibyte/mblen)
+- [mbrlen](https://devdocs.io/c/string/multibyte/mbrlen)
+- [mbrtoc16](https://devdocs.io/c/string/multibyte/mbrtoc16)
+- [mbrtoc32](https://devdocs.io/c/string/multibyte/mbrtoc32)
+- [mbrtowc](https://devdocs.io/c/string/multibyte/mbrtowc)
+- [mbsinit](https://devdocs.io/c/string/multibyte/mbsinit)
+- [mbsrtowcs](https://devdocs.io/c/string/multibyte/mbsrtowcs)
+- [mbsrtowcs_s](https://devdocs.io/c/string/multibyte/mbsrtowcs)
+- [mbstate_t](https://devdocs.io/c/string/multibyte/mbstate_t)
+- [mbstowcs](https://devdocs.io/c/string/multibyte/mbstowcs)
+- [mbstowcs_s](https://devdocs.io/c/string/multibyte/mbstowcs)
+- [mbtowc](https://devdocs.io/c/string/multibyte/mbtowc)
+- [memchr](https://devdocs.io/c/string/byte/memchr)
+- [memcmp](https://devdocs.io/c/string/byte/memcmp)
+- [memcpy](https://devdocs.io/c/string/byte/memcpy)
+- [memcpy_s](https://devdocs.io/c/string/byte/memcpy)
+- [memmove](https://devdocs.io/c/string/byte/memmove)
+- [memmove_s](https://devdocs.io/c/string/byte/memmove)
+- [memset](https://devdocs.io/c/string/byte/memset)
+- [memset_s](https://devdocs.io/c/string/byte/memset)
+- [Null-terminated byte strings](https://devdocs.io/c/string/byte)
+- [Null-terminated multibyte strings](https://devdocs.io/c/string/multibyte)
+- [Null-terminated wide strings](https://devdocs.io/c/string/wide)
+- [strcat](https://devdocs.io/c/string/byte/strcat)
+- [strcat_s](https://devdocs.io/c/string/byte/strcat)
+- [strchr](https://devdocs.io/c/string/byte/strchr)
+- [strcmp](https://devdocs.io/c/string/byte/strcmp)
+- [strcoll](https://devdocs.io/c/string/byte/strcoll)
+- [strcpy](https://devdocs.io/c/string/byte/strcpy)
+- [strcpy_s](https://devdocs.io/c/string/byte/strcpy)
+- [strcspn](https://devdocs.io/c/string/byte/strcspn)
+- [strerror](https://devdocs.io/c/string/byte/strerror)
+- [strerror_s](https://devdocs.io/c/string/byte/strerror)
+- [strerrorlen_s](https://devdocs.io/c/string/byte/strerror)
+- [Strings library](https://devdocs.io/c/string)
+- [strlen](https://devdocs.io/c/string/byte/strlen)
+- [strncat](https://devdocs.io/c/string/byte/strncat)
+- [strncat_s](https://devdocs.io/c/string/byte/strncat)
+- [strncmp](https://devdocs.io/c/string/byte/strncmp)
+- [strncpy](https://devdocs.io/c/string/byte/strncpy)
+- [strncpy_s](https://devdocs.io/c/string/byte/strncpy)
+- [strnlen_s](https://devdocs.io/c/string/byte/strlen)
+- [strpbrk](https://devdocs.io/c/string/byte/strpbrk)
+- [strrchr](https://devdocs.io/c/string/byte/strrchr)
+- [strspn](https://devdocs.io/c/string/byte/strspn)
+- [strstr](https://devdocs.io/c/string/byte/strstr)
+- [strtod](https://devdocs.io/c/string/byte/strtof)
+- [strtof](https://devdocs.io/c/string/byte/strtof)
+- [strtoimax](https://devdocs.io/c/string/byte/strtoimax)
+- [strtok](https://devdocs.io/c/string/byte/strtok)
+- [strtok_s](https://devdocs.io/c/string/byte/strtok)
+- [strtol](https://devdocs.io/c/string/byte/strtol)
+- [strtold](https://devdocs.io/c/string/byte/strtof)
+- [strtoll](https://devdocs.io/c/string/byte/strtol)
+- [strtoul](https://devdocs.io/c/string/byte/strtoul)
+- [strtoull](https://devdocs.io/c/string/byte/strtoul)
+- [strtoumax](https://devdocs.io/c/string/byte/strtoimax)
+- [strxfrm](https://devdocs.io/c/string/byte/strxfrm)
+- [tolower](https://devdocs.io/c/string/byte/tolower)
+- [toupper](https://devdocs.io/c/string/byte/toupper)
+- [towctrans](https://devdocs.io/c/string/wide/towctrans)
+- [towlower](https://devdocs.io/c/string/wide/towlower)
+- [towupper](https://devdocs.io/c/string/wide/towupper)
+- [wcrtomb](https://devdocs.io/c/string/multibyte/wcrtomb)
+- [wcrtomb_s](https://devdocs.io/c/string/multibyte/wcrtomb)
+- [wcscat](https://devdocs.io/c/string/wide/wcscat)
+- [wcscat_s](https://devdocs.io/c/string/wide/wcscat)
+- [wcschr](https://devdocs.io/c/string/wide/wcschr)
+- [wcscmp](https://devdocs.io/c/string/wide/wcscmp)
+- [wcscoll](https://devdocs.io/c/string/wide/wcscoll)
+- [wcscpy](https://devdocs.io/c/string/wide/wcscpy)
+- [wcscpy_s](https://devdocs.io/c/string/wide/wcscpy)
+- [wcscspn](https://devdocs.io/c/string/wide/wcscspn)
+- [wcslen](https://devdocs.io/c/string/wide/wcslen)
+- [wcsncat](https://devdocs.io/c/string/wide/wcsncat)
+- [wcsncat_s](https://devdocs.io/c/string/wide/wcsncat)
+- [wcsncmp](https://devdocs.io/c/string/wide/wcsncmp)
+- [wcsncpy](https://devdocs.io/c/string/wide/wcsncpy)
+- [wcsncpy_s](https://devdocs.io/c/string/wide/wcsncpy)
+- [wcsnlen_s](https://devdocs.io/c/string/wide/wcslen)
+- [wcspbrk](https://devdocs.io/c/string/wide/wcspbrk)
+- [wcsrchr](https://devdocs.io/c/string/wide/wcsrchr)
+- [wcsrtombs](https://devdocs.io/c/string/multibyte/wcsrtombs)
+- [wcsrtombs_s](https://devdocs.io/c/string/multibyte/wcsrtombs)
+- [wcsspn](https://devdocs.io/c/string/wide/wcsspn)
+- [wcsstr](https://devdocs.io/c/string/wide/wcsstr)
+- [wcstod](https://devdocs.io/c/string/wide/wcstof)
+- [wcstof](https://devdocs.io/c/string/wide/wcstof)
+- [wcstoimax](https://devdocs.io/c/string/wide/wcstoimax)
+- [wcstok](https://devdocs.io/c/string/wide/wcstok)
+- [wcstok_s](https://devdocs.io/c/string/wide/wcstok)
+- [wcstol](https://devdocs.io/c/string/wide/wcstol)
+- [wcstold](https://devdocs.io/c/string/wide/wcstof)
+- [wcstoll](https://devdocs.io/c/string/wide/wcstol)
+- [wcstombs](https://devdocs.io/c/string/multibyte/wcstombs)
+- [wcstombs_s](https://devdocs.io/c/string/multibyte/wcstombs)
+- [wcstoul](https://devdocs.io/c/string/wide/wcstoul)
+- [wcstoull](https://devdocs.io/c/string/wide/wcstoul)
+- [wcstoumax](https://devdocs.io/c/string/wide/wcstoimax)
+- [wcsxfrm](https://devdocs.io/c/string/wide/wcsxfrm)
+- [wctob](https://devdocs.io/c/string/multibyte/wctob)
+- [wctomb](https://devdocs.io/c/string/multibyte/wctomb)
+- [wctomb_s](https://devdocs.io/c/string/multibyte/wctomb)
+- [wctrans](https://devdocs.io/c/string/wide/wctrans)
+- [wctype](https://devdocs.io/c/string/wide/wctype)
+- [wmemchr](https://devdocs.io/c/string/wide/wmemchr)
+- [wmemcmp](https://devdocs.io/c/string/wide/wmemcmp)
+- [wmemcpy](https://devdocs.io/c/string/wide/wmemcpy)
+- [wmemcpy_s](https://devdocs.io/c/string/wide/wmemcpy)
+- [wmemmove](https://devdocs.io/c/string/wide/wmemmove)
+- [wmemmove_s](https://devdocs.io/c/string/wide/wmemmove)
+- [wmemset](https://devdocs.io/c/string/wide/wmemset)
+
+## Thread support
+
+- [call_once](https://devdocs.io/c/thread/once_flag_init)
+- [cnd_broadcast](https://devdocs.io/c/thread/cnd_broadcast)
+- [cnd_destroy](https://devdocs.io/c/thread/cnd_destroy)
+- [cnd_init](https://devdocs.io/c/thread/cnd_init)
+- [cnd_signal](https://devdocs.io/c/thread/cnd_signal)
+- [cnd_timedwait](https://devdocs.io/c/thread/cnd_timedwait)
+- [cnd_wait](https://devdocs.io/c/thread/cnd_wait)
+- [mtx_destroy](https://devdocs.io/c/thread/mtx_destroy)
+- [mtx_init](https://devdocs.io/c/thread/mtx_init)
+- [mtx_lock](https://devdocs.io/c/thread/mtx_lock)
+- [mtx_plain](https://devdocs.io/c/thread/mtx_types)
+- [mtx_recursive](https://devdocs.io/c/thread/mtx_types)
+- [mtx_timed](https://devdocs.io/c/thread/mtx_types)
+- [mtx_timedlock](https://devdocs.io/c/thread/mtx_timedlock)
+- [mtx_trylock](https://devdocs.io/c/thread/mtx_trylock)
+- [mtx_unlock](https://devdocs.io/c/thread/mtx_unlock)
+- [once_flag](https://devdocs.io/c/thread/once_flag_init)
+- [ONCE_FLAG_INIT](https://devdocs.io/c/thread/once_flag_init)
+- [thrd_busy](https://devdocs.io/c/thread/thrd_errors)
+- [thrd_create](https://devdocs.io/c/thread/thrd_create)
+- [thrd_current](https://devdocs.io/c/thread/thrd_current)
+- [thrd_detach](https://devdocs.io/c/thread/thrd_detach)
+- [thrd_equal](https://devdocs.io/c/thread/thrd_equal)
+- [thrd_error](https://devdocs.io/c/thread/thrd_errors)
+- [thrd_exit](https://devdocs.io/c/thread/thrd_exit)
+- [thrd_join](https://devdocs.io/c/thread/thrd_join)
+- [thrd_nomem](https://devdocs.io/c/thread/thrd_errors)
+- [thrd_sleep](https://devdocs.io/c/thread/thrd_sleep)
+- [thrd_success](https://devdocs.io/c/thread/thrd_errors)
+- [thrd_timedout](https://devdocs.io/c/thread/thrd_errors)
+- [thrd_yield](https://devdocs.io/c/thread/thrd_yield)
+- [Thread support library](https://devdocs.io/c/thread)
+- [thread_local](https://devdocs.io/c/thread/thread_local)
+- [tss_create](https://devdocs.io/c/thread/tss_create)
+- [tss_delete](https://devdocs.io/c/thread/tss_delete)
+- [TSS_DTOR_ITERATIONS](https://devdocs.io/c/thread/tss_dtor_iterations)
+- [tss_get](https://devdocs.io/c/thread/tss_get)
+- [tss_set](https://devdocs.io/c/thread/tss_set)
+
+## Type support
+
+- [Boolean type support library](https://devdocs.io/c/types/boolean)
+- [Fixed width integer types](https://devdocs.io/c/types/integer)
+- [FLT_EVAL_METHOD](https://devdocs.io/c/types/limits/flt_eval_method)
+- [FLT_ROUNDS](https://devdocs.io/c/types/limits/flt_rounds)
+- [max_align_t](https://devdocs.io/c/types/max_align_t)
+- [NULL](https://devdocs.io/c/types/null)
+- [Numeric limits](https://devdocs.io/c/types/limits)
+- [offsetof](https://devdocs.io/c/types/offsetof)
+- [ptrdiff_t](https://devdocs.io/c/types/ptrdiff_t)
+- [size_t](https://devdocs.io/c/types/size_t)
+- [Type support](https://devdocs.io/c/types)
 
 ## Variadic functions
 
-### va_arg
-### va_copy
-### va_end
-### va_list
-### va_start
+- [va_arg](https://devdocs.io/c/variadic/va_arg)
+- [va_copy](https://devdocs.io/c/variadic/va_copy)
+- [va_end](https://devdocs.io/c/variadic/va_end)
+- [va_list](https://devdocs.io/c/variadic/va_list)
+- [va_start](https://devdocs.io/c/variadic/va_start)
+- [Variadic functions](https://devdocs.io/c/variadic)
 
 ## Linux
 
