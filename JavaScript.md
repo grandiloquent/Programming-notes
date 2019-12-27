@@ -53,6 +53,59 @@
 	- [toUpperCase](#touppercase)
 	- [trimStart](#trimstart)
 
+## Date
+
+### getDate
+
+The `getDate()` method returns the day of the month for the specified date according to local time.
+
+### getDay
+### getFullYear
+### getHours
+### getMilliseconds
+### getMinutes
+### getMonth
+### getSeconds
+### getTime
+### getTimezoneOffset
+### getUTCDate
+### getUTCDay
+### getUTCFullYear
+### getUTCHours
+### getUTCMilliseconds
+### getUTCMinutes
+### getUTCMonth
+### getUTCSeconds
+### now
+### parse
+### prototype
+### setDate
+### setFullYear
+### setHours
+### setMilliseconds
+### setMinutes
+### setMonth
+### setSeconds
+### setTime
+### setUTCDate
+### setUTCFullYear
+### setUTCHours
+### setUTCMilliseconds
+### setUTCMinutes
+### setUTCMonth
+### setUTCSeconds
+### toDateString
+### toISOString
+### toJSON
+### toLocaleDateString
+### toLocaleString
+### toLocaleTimeString
+### toString
+### toTimeString
+### toUTCString
+### UTC
+### valueOf
+
 ## array
 
 ### copyWithin

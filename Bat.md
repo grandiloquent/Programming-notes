@@ -2,6 +2,8 @@
 
 ## aria2c
 
+https://github.com/aria2/aria2
+
 ```bat
 aria2c --https-proxy="https://127.0.0.1:49758" -c https://github.com/spacehuhn/esp8266_deauther/releases/download/v2.1.0/deauther_2.1.0_1mb.bin
 ```
