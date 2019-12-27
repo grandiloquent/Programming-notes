@@ -1,3 +1,4 @@
 # Programming notes
 
-[Go](/Go.md)
+- [Go](/Go.md)
+- [JavaScript](/JavaScript.md)
