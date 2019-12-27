@@ -1,7 +1,36 @@
 # JavaScript
 
-## fetch
+## object
 
+```
+var toString = Object.prototype.toString;
+
+toString.call(new Date);    // [object Date]
+toString.call(new String);  // [object String]
+toString.call(Math);        // [object Math]
+
+// Since JavaScript 1.8.5
+toString.call(undefined);   // [object Undefined]
+toString.call(null);        // [object Null]
+```
+
+## JSON
+
+```javascript
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// expected output: 42
+
+```
+
+```javascript
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
+```
+
+## fetch
 
 ```javascript
 // Example POST method implementation:
@@ -28,3 +57,4 @@ function postData(url = ``, data = {}) {
     .then(response => response.json()); // parses response to JSON
 }
 ```
+
