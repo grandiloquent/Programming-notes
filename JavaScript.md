@@ -1,5 +1,23 @@
 # JavaScript
 
+- [string](#string)
+	- [charAt](#charat)
+	- [codePointAt](#codepointat)
+	- [includes](#includes)
+	- [concat](#concat)
+	- [indexOf](#indexof)
+- [object](#object)
+	- [assign](#assign)
+	- [defineProperty](#defineproperty)
+	- [entries](#entries)
+	- [keys](#keys)
+	- [hasOwnProperty](#hasownproperty)
+	- [toString](#tostring)
+- [JSON](#json)
+	- [parse](#parse)
+	- [stringify](#stringify)
+- [fetch](#fetch)
+
 ## string
 
 ### charAt
