@@ -1,5 +1,135 @@
 # JavaScript
 
+- [array](#array)
+	- [copyWithin](#copywithin)
+	- [filter](#filter)
+	- [map](#map)
+	- [pop](#pop)
+	- [push](#push)
+	- [reduce](#reduce)
+	- [reduceRight](#reduceright)
+	- [reverse](#reverse)
+	- [shift](#shift)
+	- [slice](#slice)
+	- [some](#some)
+	- [sort](#sort)
+	- [splice](#splice)
+	- [unshift](#unshift)
+	- [values](#values)
+- [JSON](#json)
+	- [parse](#parse)
+	- [stringify](#stringify)
+- [object](#object)
+	- [assign](#assign)
+	- [defineProperty](#defineproperty)
+	- [entries](#entries)
+	- [keys](#keys)
+	- [hasOwnProperty](#hasownproperty)
+	- [toString](#tostring)
+- [Promise](#promise)
+	- [reject](#reject)
+- [regExp](#regexp)
+	- [exec](#exec)
+	- [sticky](#sticky)
+	- [test](#test)
+- [string](#string)
+	- [iterator](#iterator)
+	- [charAt](#charat)
+	- [codePointAt](#codepointat)
+	- [concat](#concat)
+	- [includes](#includes)
+	- [indexOf](#indexof)
+	- [match](#match)
+	- [normalize](#normalize)
+	- [padStart](#padstart)
+	- [raw](#raw)
+	- [repeat](#repeat)
+	- [replace](#replace)
+	- [search](#search)
+	- [slice](#slice)
+	- [split](#split)
+	- [startsWith](#startswith)
+	- [substring](#substring)
+	- [toUpperCase](#touppercase)
+	- [trimStart](#trimstart)
+
+## array
+
+### copyWithin
+
+```javascript
+const array1 = ['a', 'b', 'c', 'd', 'e'];
+
+// copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// expected output: Array ["d", "b", "c", "d", "e"]
+
+// copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// expected output: Array ["d", "d", "e", "d", "e"]
+
+```
+
+### filter
+
+```javascript
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+```
+
+### map
+
+```javascript
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+
+```
+
+### pop
+
+```javascript
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// expected output: "tomato"
+
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+```
+
+### push
+
+```javascript
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+// expected output: 4
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens', 'cats', 'dogs');
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+```
+
 ### reduce
 
 The `reduce()` method executes a reducer function (that you provide) on each member of the array resulting in a single output value.
@@ -155,6 +285,126 @@ for (const value of iterator) {
 
 ```
 
+## JSON
+
+### parse
+
+```javascript
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// expected output: 42
+
+```
+
+### stringify
+
+```javascript
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
+```
+
+## object
+
+### assign
+
+```javascript
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// expected output: Object { a: 1, b: 4, c: 5 }
+```
+
+### defineProperty
+
+```javascript
+const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: false
+});
+
+object1.property1 = 77;
+// throws an error in strict mode
+
+console.log(object1.property1);
+// expected output: 42
+
+```
+
+### entries
+
+```javascript
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+
+for (let [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// expected output:
+// "a: somestring"
+// "b: 42"
+// order is not guaranteed
+
+```
+
+### keys
+
+```javascript
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.keys(object1));
+// expected output: Array ["a", "b", "c"]
+
+```
+
+### hasOwnProperty
+
+```javascript
+var foo = {
+  hasOwnProperty: function() {
+    return false;
+  },
+  bar: 'Here be dragons'
+};
+
+foo.hasOwnProperty('bar'); // always returns false
+
+// Use another Object's hasOwnProperty
+// and call it with 'this' set to foo
+({}).hasOwnProperty.call(foo, 'bar'); // true
+
+// It's also possible to use the hasOwnProperty property
+// from the Object prototype for this purpose
+Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+```
+
+### toString
+
+```javascript
+var toString = Object.prototype.toString;
+
+toString.call(new Date);    // [object Date]
+toString.call(new String);  // [object String]
+toString.call(Math);        // [object Math]
+
+// Since JavaScript 1.8.5
+toString.call(undefined);   // [object Undefined]
+toString.call(null);        // [object Null]
+```
+
 ## Promise
 
 ```javascript
@@ -190,6 +440,72 @@ Promise.reject(new Error('fail')).then(resolved, rejected);
 
 ```
 
+## regExp
+
+### exec
+
+```javascript
+var regex1 = RegExp('foo*','g');
+var str1 = 'table football, foosball';
+var array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // expected output: "Found foo. Next starts at 9."
+  // expected output: "Found foo. Next starts at 19."
+}
+
+```
+
+### sticky
+
+The `sticky` property reflects whether or not the search is sticky (searches in strings only from the index indicated by the lastIndex property of this regular expression). sticky is a read-only property of an individual regular expression object.
+
+```javascript
+var str1 = 'table football';
+var regex1 = new RegExp('foo','y');
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// expected output: true
+
+console.log(regex1.test(str1));
+// expected output: true
+
+console.log(regex1.test(str1));
+// expected output: false
+
+```
+
+### test
+
+```javascript
+var str = 'table football';
+
+var regex = RegExp('foo*');
+var globalRegex = RegExp('foo*','g');
+
+console.log(regex.test(str));
+// expected output: true
+
+console.log(regex.test(str));
+// expected output: true
+
+console.log(globalRegex.lastIndex);
+// expected output: 0
+
+console.log(globalRegex.test(str));
+// expected output: true
+
+console.log(globalRegex.lastIndex);
+// expected output: 9
+
+console.log(globalRegex.test(str));
+// expected output: false
+
+```
+
 ## string
 
 ### iterator
@@ -206,7 +522,7 @@ while(!theChar.done && theChar.value !== ' ') {
   // expected output: "T"
   //                  "h"
   //                  "e"
-}  
+}
 
 ```
 
@@ -459,153 +775,5 @@ console.log(greeting);
 console.log(greeting.trimStart());
 // expected output: "Hello world!   ";
 
-```
-
-## object
-
-### assign
-
-```javascript
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-
-const returnedTarget = Object.assign(target, source);
-
-console.log(target);
-// expected output: Object { a: 1, b: 4, c: 5 }
-```
-
-### defineProperty
-
-```javascript
-const object1 = {};
-
-Object.defineProperty(object1, 'property1', {
-  value: 42,
-  writable: false
-});
-
-object1.property1 = 77;
-// throws an error in strict mode
-
-console.log(object1.property1);
-// expected output: 42
-
-```
-
-### entries
-
-```javascript
-const object1 = {
-  a: 'somestring',
-  b: 42
-};
-
-for (let [key, value] of Object.entries(object1)) {
-  console.log(`${key}: ${value}`);
-}
-
-// expected output:
-// "a: somestring"
-// "b: 42"
-// order is not guaranteed
-
-```
-
-### keys
-
-```javascript
-const object1 = {
-  a: 'somestring',
-  b: 42,
-  c: false
-};
-
-console.log(Object.keys(object1));
-// expected output: Array ["a", "b", "c"]
-
-```
-
-### hasOwnProperty
-
-```javascript
-var foo = {
-  hasOwnProperty: function() {
-    return false;
-  },
-  bar: 'Here be dragons'
-};
-
-foo.hasOwnProperty('bar'); // always returns false
-
-// Use another Object's hasOwnProperty
-// and call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
-
-// It's also possible to use the hasOwnProperty property
-// from the Object prototype for this purpose
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
-```
-
-### toString
-
-```javascript
-var toString = Object.prototype.toString;
-
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
-
-// Since JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
-```
-
-## JSON
-
-### parse
-
-```javascript
-const json = '{"result":true, "count":42}';
-const obj = JSON.parse(json);
-
-console.log(obj.count);
-// expected output: 42
-
-```
-
-### stringify
-
-```javascript
-console.log(JSON.stringify({ x: 5, y: 6 }));
-// expected output: "{"x":5,"y":6}"
-```
-
-## fetch
-
-```javascript
-// Example POST method implementation:
-
-postData(`http://example.com/answer`, {answer: 42})
-  .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-  .catch(error => console.error(error));
-
-function postData(url = ``, data = {}) {
-  // Default options are marked with *
-    return fetch(url, {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        mode: "cors", // no-cors, cors, *same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin", // include, *same-origin, omit
-        headers: {
-            "Content-Type": "application/json; charset=utf-8",
-            // "Content-Type": "application/x-www-form-urlencoded",
-        },
-        redirect: "follow", // manual, *follow, error
-        referrer: "no-referrer", // no-referrer, *client
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-    })
-    .then(response => response.json()); // parses response to JSON
-}
 ```
 
