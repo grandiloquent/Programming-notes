@@ -948,3 +948,98 @@ http://man7.org/linux/man-pages/man3/readdir.3.html
 
 http://man7.org/linux/man-pages/man2/stat.2.html
 
+## Books
+
+### C Programming Cookbook
+
+- Section 1: Arrays, Strings, and Functions
+
+- Working with Arrays
+
+  - Inserting an element in an array
+  - Multiplying two matrices
+  - Finding the common elements in two arrays
+  - Finding the difference between two sets or arrays
+  - Finding the unique elements in an array
+  - Finding whether a matrix is sparse
+  - Merging two sorted arrays into a single array
+
+- Managing Strings
+
+  - Determining whether the string is a palindrome&#xA0;
+  - Finding the occurrence of the first repetitive character in a string
+  - Displaying the count of each character in a string
+  - Counting vowels and consonants in a sentence
+  - Converting the vowels in a sentence to uppercase
+
+- Exploring Functions
+
+  - What is a stack?
+  - Finding whether a number is an Armstrong number
+  - Returning maximum and minimum values in an array
+  - Finding the greatest common divisor using recursion
+  - Converting a binary number into a hexadecimal number
+  - Finding whether a number is a palindrome&#xA0;
+
+- Section 2: Pointers and Files
+
+- Deep Dive into Pointers
+
+  - What is a pointer?
+  - Reversing a string using pointers
+  - Finding the largest value in an array using pointers
+  - Sorting a singly linked list
+  - Finding the transpose of a matrix using pointers
+  - Accessing a structure using a pointer
+
+- File Handling
+
+  - Functions used in file handling
+  - Reading a text file and converting all characters after the period into uppercase
+  - Displaying the contents of a random file in reverse order
+  - Counting the number of vowels in a file
+  - Replacing a word in a file with another word
+  - Encrypting a file
+
+- Section 3: Concurrency, Networking, and Databases
+
+- Implementing Concurrency
+
+  - What are processes and threads?
+  - Performing a task with a single thread
+  - Performing multiple tasks with multiple threads
+  - Using&#xA0;mutex to share data between two threads
+  - Understanding how a deadlock is created
+  - Avoiding a deadlock
+
+- Networking and Interprocess Communication
+
+  - Communicating between processes using pipes
+  - Communicating between processes using FIFO
+  - Communicating between the client and server using socket programming
+  - Communicating between processes using a&#xA0;UDP socket
+  - Passing a message from one process to another using the message queue
+  - Communicating between processes using shared memory
+
+- Using MySQL Database
+
+  - Functions in MySQL
+  - Creating a MySQL database and tables
+  - Displaying all the built-in tables in a default mysql database
+  - Storing information in MySQL database
+  - Searching for the desired information in the database
+  - Updating information in the database
+  - Deleting data from the database using C
+
+- Appendix A
+
+  - Creating a sequential file and entering some data into it
+  - Reading content from a sequential file and displaying it onscreen
+  - Creating a random file and entering some data into it
+  - Reading content from a random file and displaying it onscreen
+  - Decrypting the contents of an encrypted file
+
+## 更多
+
+- https://github.com/aosp-mirror/platform_bionic/tree/master/libc/upstream-openbsd/lib/libc
+
