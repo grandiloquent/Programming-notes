@@ -1,8 +1,12 @@
+// -lws2_32 -lpthread
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <stddef.h>
 #include <string.h>
+#include <pthread.h>
+#include "http2.h"
 #include "lite-list.h"
 
 #ifndef container_of
@@ -26,10 +30,10 @@ int contains(list_head_t* list, const char* s)
     }
     return 0;
 }
-int main()
-{
 
-    LIST_HEAD(word_list);
+list_head_t* collect()
+{
+    static LIST_HEAD(word_list);
     INIT_LIST_HEAD(&word_list);
 
     FILE* txt = fopen("words.txt", "r");
@@ -66,15 +70,21 @@ int main()
             memset(buf, 0, len);
         }
     }
-    word_t *pos, *tmp;
-    list_for_each_entry_safe(pos, tmp, &word_list, list, word_t)
-    {
-        printf("%s\n", pos->buf);
-        list_del(&pos->list);
-        free(pos->buf);
-        free(pos);
-    }
     fclose(txt);
+    return &word_list;
+}
+int main()
+{
+    collect();
+
+    // word_t *pos, *tmp;
+    // list_for_each_entry_safe(pos, tmp, &word_list, list, word_t)
+    // {
+    //     printf("%s\n", pos->buf);
+    //     list_del(&pos->list);
+    //     free(pos->buf);
+    //     free(pos);
+    // }
 
     return 0;
 }
